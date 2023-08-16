@@ -1,0 +1,2 @@
+Make Dead Links Using the Hash Symbol
+Tạo các dead link bằng biểu tượng #

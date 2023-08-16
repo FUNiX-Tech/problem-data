@@ -1,12 +1,27 @@
+Commenting is a way that you can leave comments for other developers within your code without affecting the resulting output that is displayed to the end user.
 
+Commenting is also a convenient way to make code inactive without having to delete it entirely.
 
-  ---
-  
-  
-  
-  ---
-  
-  ```html
-  
-  ```
-  
+Comments in HTML start with `<!--` and end with a `-->`
+
+Uncomment your `h1`, `h2` and `p` elements.
+
+---
+
+Comment là một cách mà bạn có thể để lại comments cho các nhà phát triển khác trong code của mình mà không ảnh hưởng đến kết quả hiển thị cho người dùng cuối.
+
+Comment cũng là một cách thuận tiện để làm cho code không hoạt động mà không phải xóa nó.
+
+Comment trong HTML bắt đầu bằng `<!--` và kết thúc bằng `-->`
+
+- **Yêu cầu:** Bỏ ghi chú các phần tử `h1`, `h2` và `p` của bạn.
+
+```html
+<!--
+<h1>Hello World</h1>
+
+<h2>CatPhotoApp</h2>
+
+<p>Kitty ipsum dolor sit amet, shed everywhere shed everywhere stretching attack your ankles chase the red dot, hairball run catnip eat the grass sniff.</p>
+-->
+```

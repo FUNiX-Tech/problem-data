@@ -1,0 +1,2 @@
+Use HTML5 to Require a Field
+Dùng HTML5 để tạo trường yêu cầu bắt buộc nhập

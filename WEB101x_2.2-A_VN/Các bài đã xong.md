@@ -4,3 +4,25 @@
 - 2.2
 - 2.3
 - 2.4
+- 2.5: comment, xem lại sau
+- 2.6: xem lại sau
+- 2.7: xem lại sau
+- 2.8: xem lại sau
+- 3.1: temp
+- 3.2: closing tag
+- 3.3: temp
+- 3.4: temp
+- 3.5: temp
+- 3.6: temp
+- 3.7: temp
+- 3.8: temp
+- 3.9: bài thực hành trên vscode
+- 3.10: bài thực hành trên vscode
+- 3.11: temp
+- 3.12: temp
+- 3.13: temp
+- 3.14: temp
+- 3.15: temp
+- 3.16: temp
+- 3.17: temp
+- 3.18: temp
