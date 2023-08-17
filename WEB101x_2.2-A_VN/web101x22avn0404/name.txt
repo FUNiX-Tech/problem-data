@@ -1,0 +1,2 @@
+Set the font-size of Paragraph Text
+Thiết lập font-size cho văn bản của paragraph
