@@ -1,116 +1,107 @@
 # WEB101x_2.2-A_VN các bài đã xong
 
-- 2.1
-- 2.2
-- 2.3
-- 2.4
-- 2.5: temp
-- 2.6: temp
-- 2.7: temp
-- 2.8: temp
-- 3.1: temp
-- 3.2: temp
-- 3.3: temp
-- 3.4: temp
-- 3.5: temp
-- 3.6: temp
-- 3.7: temp
-- 3.8: temp
-- 3.9: bài thực hành trên vscode
-- 3.10: bài thực hành trên vscode
-- 3.11: temp
-- 3.12: temp
-- 3.13: temp
-- 3.14: temp
-- 3.15: temp
-- 3.16: temp
-- 3.17: temp
-- 3.18: temp
-- 3.19: temp
-- 4.1: temp
-- 4.2: temp
-- 4.3: temp
-- 4.4: temp
-- 4.5: temp
-- 4.6: temp
-- 4.7: temp
-- 4.8: temp
-- 4.9: temp
-- 4.10: temp
-- 4.11: temp
-- 4.12: temp
-- 4.13: temp
-- 4.14: temp
-- 4.15: temp
-- 4.16: temp
-- 4.17: temp
+- 2.1: đã test
+- 2.2: đã test
+- 2.3: đã test
+- 2.4: đã test
+- 2.5: đã test
+- 2.6: đã test
+- 2.7: đã test
+- 2.8: đã test
+- 3.1: đã test
+- 3.2: đã test
+- 3.3: đã test
+- 3.4: đã test
+- 3.5: đã test
+- 3.6: đã test
+- 3.7: đã test
+- 3.8: đã test
+- 3.11: đã test
+- 3.12: đã test
+- 3.13: đã test
+- 3.14: đã test
+- 3.15: đã test
+- 3.16: đã test
+- 3.17: đã test
+- 3.18: đã test
+- 3.19: đã test
+- 4.1: đã test
+- 4.2: đã test
+- 4.3: đã test
+- 4.4: đã test
+- 4.5: đã test
+- 4.6: đã test
+- 4.7: đã test
+- 4.8: đã test
+- 4.9: đã test
+- 4.10: đã test
+- 4.11: đã test
+- 4.12: đã test
+- 4.13: đã test
+- 4.14: đã test
+- 4.15: đã test
+- 4.16: đã test
+- 4.17: đang test
 
 - 5.1: hover
-- 5.2: temp
-- 5.3: temp
-- 5.4: temp
-- 5.5: temp
-- 5.6: temp
-- 5.7: temp
-- 5.8: vscode
+- 5.2: 
+- 5.3: 
+- 5.4: 
+- 5.5: 
+- 5.6: 
+- 5.7: 
 
-- 6.1: temp
-- 6.2: temp
-- 6.3: temp
-- 6.4: temp
-- 6.5: temp
-- 6.6: temp
-- 6.7: temp
-- 6.8: vscode
+- 6.1: 
+- 6.2: 
+- 6.3: 
+- 6.4: 
+- 6.5: 
+- 6.6: 
+- 6.7: 
 
-- 7.1: temp
-- 7.2: temp
-- 7.3: temp
-- 7.4: temp
-- 7.5: vscode
+- 7.1: 
+- 7.2: 
+- 7.3: 
+- 7.4: 
 
-- 8.1: temp
-- 8.2: vscode
+- 8.1: 
 
-- 9.1: temp
-- 9.2: temp
-- 9.3: temp
-- 9.4: temp
-- 9.5: temp
-- 9.6: temp
-- 9.8: temp
-- 9.9: temp
-- 9.10: temp
-- 9.11: temp
-- 9.12: temp
-- 9.13: temp
-- 9.14: temp
-- 9.15: temp
-- 9.16: temp
-- 9.17: temp
-- 9.18: vscode
+- 9.1: 
+- 9.2: 
+- 9.3: 
+- 9.4: 
+- 9.5: 
+- 9.6: 
+- 9.8: 
+- 9.9: 
+- 9.10: 
+- 9.11: 
+- 9.12: 
+- 9.13: 
+- 9.14: 
+- 9.15: 
+- 9.16: 
+- 9.17: 
 
-- 10.1: temp
-- 10.2: temp
-- 10.3: temp
-- 10.4: temp
-- 10.5: temp
-- 10.6: temp
-- 10.7: temp
-- 10.8: temp
-- 10.9: temp
-- 10.10: temp
-- 10.11: temp
-- 10.12: temp
-- 10.13: temp
-- 10.14: temp
-- 10.15: temp
-- 10.16: temp
-- 10.17: temp
-- 10.18: temp
-- 10.19: temp
-- 10.20: temp
+- 10.1: 
+- 10.2: 
+- 10.3: 
+- 10.4: 
+- 10.5: 
+- 10.6: 
+- 10.7: 
+- 10.8: 
+- 10.9: 
+- 10.10: 
+- 10.11: 
+- 10.12: 
+- 10.13: 
+- 10.14: 
+- 10.15: 
+- 10.16: 
+- 10.17: 
+- 10.18: 
+- 10.19: 
+- 10.20: 
 
-- 10.21: vscode
-
-- 11.1 - temp
+- 11.1:
