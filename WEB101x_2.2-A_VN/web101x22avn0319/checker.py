@@ -10,44 +10,29 @@ def check(process_output, judge_output, judge_input, point_value, submission_sou
   soup = BeautifulSoup(source, 'html.parser')
   
   # criteria 1
-  if input == "Radio button đầu tiên mặc định được check ":
-    
-    radio = soup.find("input", type="radio")
-
-    if radio and radio.get("checked") == "":
-
+  if input == "Radio button đầu tiên mặc định được check":
+    print(soup.find("input", type="radio") == soup.find("input", type="radio", checked=True))
+    if soup.find("input", type="radio") == soup.find("input", type="radio", checked=True):
       return CheckerResult(True, point_value, "")
-
     return CheckerResult(False, 0, "")
 
   # criteria 2
   if input == "Checkbox đầu tiên của form được check theo mặc định":
-
-    form = soup.form
-
-    if form is None: 
-      
-      return CheckerResult(False, 0, "")
-      
-    checkbox = form.find("input", type="checkbox")
-
-    if checkbox and checkbox.get("checked") == "":
-
+    if soup.form and soup.form.find("input", type="checkbox") == soup.form.find("input", type="checkbox", checked=True):
       return CheckerResult(True, point_value, "")
-
     return CheckerResult(False, 0, "")
   
   # criteria 3
   if input == "Không thay đổi text của label Indoor":
     label = soup.find("label",attrs={"for": "indoor"})
-    if label and label.contents[1] == " Indoor":
+    if label and len(label.contents) >=2 and label.contents[1].strip() == "Indoor":
       return CheckerResult(True, point_value, "")
     return CheckerResult(False, 0, "")
   
   # criteria 4
   if input == "Không thay đổi text của label Loving":
     label = soup.find("label",attrs={"for": "loving"})
-    if label and label.contents[1] == " Loving":
+    if label and len(label.contents) >=2 and label.contents[1].strip() == "Loving":
       return CheckerResult(True, point_value, "")
     return CheckerResult(False, 0, "")
   

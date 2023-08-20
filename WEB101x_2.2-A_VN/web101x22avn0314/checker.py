@@ -10,31 +10,27 @@ def check(process_output, judge_output, judge_input, point_value, submission_sou
   soup = BeautifulSoup(source, 'html.parser')
   
   # criteria 1
-  if input == "Có một button ở trong thẻ form":
-    if len(soup.find_all("form")) == 1 and len(soup.find_all("button")) == 1 and soup.button.parent and soup.button.parent.name == "form":
+  if input == "Có một button ở trong phần tử form":
+    if soup.form and soup.form.find("button"):
       return CheckerResult(True, point_value, "")
-    else:
-      return CheckerResult(False, 0, "")
+    return CheckerResult(False, 0, "")
 
   # criteria 2
   if input == "Submit button có attribute type có giá trị là submit":
-    if len(soup.find_all("button")) == 1 and soup.button.get('type') == "submit":
+    if soup.find("button", type="submit"):
       return CheckerResult(True, point_value, "")
-    else:
-      return CheckerResult(False, 0, "")
+    return CheckerResult(False, 0, "")
   
   # criteria 3
   if input == "Submit button có nội dung chữ là Submit":
-    if len(soup.find_all("button")) == 1 and soup.button.text == "Submit":
+    if soup.find("button", string="Submit"):
       return CheckerResult(True, point_value, "")
-    else:
-      return CheckerResult(False, 0, "")
+    return CheckerResult(False, 0, "")
   
   # criteria 4
   if input == "Button cần có thẻ đóng":
-    if len(soup.find_all("button")) == 1 and len(re.findall(r"</button>")) == 1:
+    if soup.button and len(soup.find_all("button")) == source.count("</button>"):
       return CheckerResult(True, point_value, "")
-    else:
-      return CheckerResult(False, 0, "")
+    return CheckerResult(False, 0, "")
   
   return CheckerResult(False, 0, "Lỗi checker")

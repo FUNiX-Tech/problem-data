@@ -1,0 +1,2 @@
+Use RGB values to Color Elements
+Sử dụng giá trị RGB cho các phần tử màu

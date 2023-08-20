@@ -1,0 +1,2 @@
+Use the flex Shorthand Property
+Sử dụng thuộc tính flex với cú pháp rút gọn

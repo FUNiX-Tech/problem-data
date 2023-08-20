@@ -8,7 +8,6 @@ def check(process_output, judge_output, judge_input, point_value, submission_sou
 
   soup = BeautifulSoup(source, 'html.parser')
   
-  if len(soup.find_all("input")) == 1 and soup.input.get('type') == 'text':
+  if soup.find("input", type="text"):
     return CheckerResult(True, point_value, "")
-    
   return CheckerResult(False, 0, "")

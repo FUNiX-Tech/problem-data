@@ -1,0 +1,2 @@
+Reduce Repetition Using the repeat Function
+Sử dụng cú pháp repeat trong Grid

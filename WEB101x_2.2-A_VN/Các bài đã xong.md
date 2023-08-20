@@ -4,12 +4,12 @@
 - 2.2
 - 2.3
 - 2.4
-- 2.5: comment, xem lại sau
-- 2.6: xem lại sau
-- 2.7: xem lại sau
-- 2.8: xem lại sau
+- 2.5: temp
+- 2.6: temp
+- 2.7: temp
+- 2.8: temp
 - 3.1: temp
-- 3.2: closing tag
+- 3.2: temp
 - 3.3: temp
 - 3.4: temp
 - 3.5: temp
@@ -30,3 +30,87 @@
 - 4.1: temp
 - 4.2: temp
 - 4.3: temp
+- 4.4: temp
+- 4.5: temp
+- 4.6: temp
+- 4.7: temp
+- 4.8: temp
+- 4.9: temp
+- 4.10: temp
+- 4.11: temp
+- 4.12: temp
+- 4.13: temp
+- 4.14: temp
+- 4.15: temp
+- 4.16: temp
+- 4.17: temp
+
+- 5.1: hover
+- 5.2: temp
+- 5.3: temp
+- 5.4: temp
+- 5.5: temp
+- 5.6: temp
+- 5.7: temp
+- 5.8: vscode
+
+- 6.1: temp
+- 6.2: temp
+- 6.3: temp
+- 6.4: temp
+- 6.5: temp
+- 6.6: temp
+- 6.7: temp
+- 6.8: vscode
+
+- 7.1: temp
+- 7.2: temp
+- 7.3: temp
+- 7.4: temp
+- 7.5: vscode
+
+- 8.1: temp
+- 8.2: vscode
+
+- 9.1: temp
+- 9.2: temp
+- 9.3: temp
+- 9.4: temp
+- 9.5: temp
+- 9.6: temp
+- 9.8: temp
+- 9.9: temp
+- 9.10: temp
+- 9.11: temp
+- 9.12: temp
+- 9.13: temp
+- 9.14: temp
+- 9.15: temp
+- 9.16: temp
+- 9.17: temp
+- 9.18: vscode
+
+- 10.1: temp
+- 10.2: temp
+- 10.3: temp
+- 10.4: temp
+- 10.5: temp
+- 10.6: temp
+- 10.7: temp
+- 10.8: temp
+- 10.9: temp
+- 10.10: temp
+- 10.11: temp
+- 10.12: temp
+- 10.13: temp
+- 10.14: temp
+- 10.15: temp
+- 10.16: temp
+- 10.17: temp
+- 10.18: temp
+- 10.19: temp
+- 10.20: temp
+
+- 10.21: vscode
+
+- 11.1 - temp

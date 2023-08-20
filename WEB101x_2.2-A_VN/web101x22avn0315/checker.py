@@ -9,7 +9,6 @@ def check(process_output, judge_output, judge_input, point_value, submission_sou
 
   soup = BeautifulSoup(source, 'html.parser')
   
-  if soup.input and soup.input.get("required") is not None:
+  if soup.find("input", required=True):
     return CheckerResult(True, point_value, "")
-  else:
-    return CheckerResult(False, 0, "")
+  return CheckerResult(False, 0, "")

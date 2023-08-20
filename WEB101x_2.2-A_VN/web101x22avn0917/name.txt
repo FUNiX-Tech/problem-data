@@ -1,0 +1,2 @@
+Use the order Property to Rearrange Items
+Sử dụng thuộc tính order để sắp xếp lại các item

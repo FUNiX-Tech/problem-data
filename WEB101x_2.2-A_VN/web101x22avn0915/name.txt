@@ -1,0 +1,2 @@
+Use the flex-basis Property to Set the Initial Size of an Item
+Sử dụng thuộc tính flex-basis để đặt kích thước ban đầu cho item

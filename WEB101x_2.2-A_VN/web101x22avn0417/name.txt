@@ -1,0 +1,2 @@
+Adjust the background-color Property of Text
+Thuộc tính background-color

@@ -10,21 +10,13 @@ def check(process_output, judge_output, judge_input, point_value, submission_sou
   soup = BeautifulSoup(source, 'html.parser')
   
   # criteria 1
-  if input == "Thẻ h2 có khai báo attribute style":
-
-    if len(soup.find_all("h2")) != 1:
-
-      return CheckerResult(False, 0, "")
-    
-    if soup.h2.get("style") is not None:
-      
+  if input == "Phần tử h2 có khai báo attribute style":
+    if soup.find("h2", style=True):
       return CheckerResult(True, point_value, "")
-
     return CheckerResult(False, 0, "")
-    
 
   # criteria 2
-  if input == "Thẻ h2 của bạn có color được đặt giá trị là red":
+  if input == "Phần tử h2 có color được đặt giá trị là red":
 
     if len(soup.find_all("h2")) != 1:
 
@@ -42,7 +34,7 @@ def check(process_output, judge_output, judge_input, point_value, submission_sou
     return CheckerResult(False, 0, "")
 
   # criteria 3
-  if input == "Khai báo style của bạn phải kết thúc với một dấu ;":
+  if input == "Khai báo style phải kết thúc với một dấu ;":
 
     if len(soup.find_all("h2")) != 1:
 
@@ -54,11 +46,9 @@ def check(process_output, judge_output, judge_input, point_value, submission_sou
       
       return CheckerResult(False, 0, "")
     
-    if style.strip().rfind(";") == len(style.strip()) - 1:
+    if style.count(";") > 0 and style.strip().rfind(";") == len(style.strip()) - 1:
       
       return CheckerResult(True, point_value, "")
-    
     return CheckerResult(False, 0, "")
-    
   
   return CheckerResult(False, 0, "Lỗi checker")

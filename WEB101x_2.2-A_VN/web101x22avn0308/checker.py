@@ -12,75 +12,51 @@ def check(process_output, judge_output, judge_input, point_value, submission_sou
   soup = BeautifulSoup(source, 'html.parser')
   
   # criteria 1
-  if input == "Có 2 thẻ p":
+  if input == "Có 2 phần tử p":
     if len(soup.find_all("p")) == 2:
       return CheckerResult(True, point_value, "")
-    else:
-      return CheckerResult(False, 0, "")
+    return CheckerResult(False, 0, "")
 
   # criteria 2
-  if input == "Mỗi thẻ p cần có thẻ đóng":
-    if len(soup.find_all("p")) != 2:
-      return CheckerResult(False, 0, "")
-
-    if len(re.findall(r"<p>", source)) == 2 and len(re.findall(r"</p>", source)) == 2:
+  if input == "Mỗi phần tử p cần có thẻ đóng":
+    if soup.p and len(soup.find_all("p")) == source.count("</p>"):
       return CheckerResult(True, point_value, "")
-    
     return CheckerResult(False, 0, "")
   
   # criteria 3
-  if input == "Thẻ p thứ 2 có nội dung là đoạn văn kitty ipsum text được cho":
-    if len(soup.find_all("p")) != 2:
+  if input == "Phần tử p thứ 2 có nội dung là đoạn văn kitty ipsum text được cho":
+    if len(soup.find_all("p")) < 2:
       return CheckerResult(False, 0, "")
     
     if soup.find_all("p")[1].text == kitty_ipsum:
       return CheckerResult(True, point_value, "")
-    
     return CheckerResult(False, 0, "")
-      
   
   # criteria 4
-  if input == "Chỉ có một thẻ main":
+  if input == "Chỉ có một phần tử main":
     if len(soup.find_all("main")) == 1:
       return CheckerResult(True, point_value, "")
-    else:
-      return CheckerResult(False, 0, "")
+    return CheckerResult(False, 0, "")
   
   # criteria 5
-  if input == "Thẻ main có 2 thẻ p là thẻ con":
-    if len(soup.find_all("main")) != 1 or len(soup.find_all("p")) != 2:
-      return CheckerResult(False, 0, "")
-    
-    ps = soup.find_all("p")
-    if ps[0].parent and ps[0].parent.name == "main" and ps[1].parent and ps[1].parent.name == "main":
+  if input == "Phần tử main có 2 phần tử p là phần tử con":
+    if len(soup.find_all("main")) == 1 and len(soup.main.find_all("p")) == 2:
       return CheckerResult(True, point_value, "")
-    else:
-      return CheckerResult(False, 0, "")
+    return CheckerResult(False, 0, "")
   
   # criteria 6
-  if input == "Thẻ mở của thẻ main nằm trước thẻ mở của thẻ p thứ nhất":
-    if soup.p and soup.p.parent and soup.p.parent.namt == "main":
-      return CheckerResult(True, point_value, "")
-    else:
-      return CheckerResult(False, 0, "")
+  if input == "Thẻ mở của phần tử main nằm trước thẻ mở của phần tử p thứ nhất":
+    if len(soup.find_all("main")) == 1 and len(soup.main.find_all("p")) == 2:
+      if re.search(r"<main>[ \n\t\r]*<p>", source):
+        return CheckerResult(True, point_value, "")
+    return CheckerResult(False, 0, "")
   
   # criteria 7
-  if input == "Thẻ đóng của thẻ main nằm sau thẻ đóng của thẻ p thứ 2":
-    if len(soup.find_all("main")) != 1 or len(soup.find_all("p")) != 2:
-      return CheckerResult(False, 0, "")
-    
-    ps = soup.find_all("p")
-    if \
-      ps[0].parent and \
-      ps[0].parent.name == "main" and \
-      ps[1].parent and \
-      ps[1].parent.name == "main" and \
-      len(re.findall(r"</p>", source)) == 2 and \
-      len(re.findall(r"</main>", source)) == 1:  
-        
-      return CheckerResult(True, point_value, "")
-    else:
-      return CheckerResult(False, 0, "")
+  if input == "Thẻ đóng của phần tử main nằm sau thẻ đóng của phần tử p thứ 2":
+    if len(soup.find_all("main")) == 1 and len(soup.main.find_all("p")) == 2:
+      if re.search(r"</p>[ \r\n\t]*</main>", source):
+        return CheckerResult(True, point_value, "")
+    return CheckerResult(False, 0, "")
     
   
   return CheckerResult(False, 0, "Lỗi checker")

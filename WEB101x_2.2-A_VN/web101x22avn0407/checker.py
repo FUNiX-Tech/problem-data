@@ -1,10 +1,9 @@
-from bs4 import BeautifulSoup, Comment
+from bs4 import BeautifulSoup
 from dmoj.result import CheckerResult
-from dmoj.utils.unicode import utf8text
-from dmoj.utils.css_parser import parse_css, count_element
+from dmoj.utils.css_parser import parse_css
 
 def _check(soup, element, font_size, point_value):
-  if count_element(soup, element) != 1:
+  if len(soup.find_all(element)) != 1:
     return CheckerResult(False, 0, "")
 
   css = parse_css(soup)
@@ -24,27 +23,27 @@ def check(process_output, judge_output, judge_input, point_value, submission_sou
   soup = BeautifulSoup(source, 'html.parser')
   
   # criteria 1
-  if input == "Đặt font-size cho thẻ h1 bằng 68 pixels ở trong tag <style>":
+  if input == "Đặt font-size cho phần tử h1 bằng 68 pixels ở trong phần tử style":
     return _check(soup, "h1", 68, point_value)
 
   # criteria 2
-  if input == "Đặt font-size cho thẻ h2 bằng 52 pixels ở trong tag <style>":
+  if input == "Đặt font-size cho phần tử h2 bằng 52 pixels ở trong phần tử style":
     return _check(soup, "h2", 52, point_value)
   
   # criteria 3
-  if input == "Đặt font-size cho thẻ h3 bằng 40 pixels ở trong tag <style>":
+  if input == "Đặt font-size cho phần tử h3 bằng 40 pixels ở trong phần tử style":
     return _check(soup, "h3", 40, point_value)
   
   # criteria 4
-  if input == "Đặt font-size cho thẻ h4 bằng 32 pixels ở trong tag <style>":
+  if input == "Đặt font-size cho phần tử h4 bằng 32 pixels ở trong phần tử style":
     return _check(soup, "h4", 32, point_value)
   
   # criteria 5
-  if input == "Đặt font-size cho thẻ h5 bằng 21 pixels ở trong tag <style>":
+  if input == "Đặt font-size cho phần tử h5 bằng 21 pixels ở trong phần tử style":
     return _check(soup, "h5", 21, point_value)
   
   # criteria 6
-  if input == "Đặt font-size cho thẻ h6 bằng 14 pixels ở trong tag <style>":
+  if input == "Đặt font-size cho phần tử h6 bằng 14 pixels ở trong phần tử style":
     return _check(soup, "h6", 14, point_value)
   
   return CheckerResult(False, 0, "Lỗi checker")

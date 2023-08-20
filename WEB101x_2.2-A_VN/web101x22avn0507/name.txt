@@ -1,0 +1,2 @@
+Inherit Styles from the Body Element
+Styles kế thừa từ phần tử body

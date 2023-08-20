@@ -1,0 +1,2 @@
+Align All Items Horizontally using justify-items
+Căn chỉnh toàn bộ item theo chiều ngang bằng cách sử dụng justify-items
