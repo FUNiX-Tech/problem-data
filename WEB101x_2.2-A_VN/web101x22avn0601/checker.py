@@ -1,4 +1,4 @@
-from bs4 import BeautifulSoup, Comment
+from bs4 import BeautifulSoup
 from dmoj.result import CheckerResult
 from dmoj.utils.css_parser import parse_css
   
@@ -13,6 +13,5 @@ def check(process_output, judge_output, judge_input, point_value, submission_sou
 
   if css.get(".blue-box") and css.get(".blue-box").get("padding") == '20px':
     return CheckerResult(True, point_value, "")
-    
   
   return CheckerResult(False, 0, "Lỗi checker")

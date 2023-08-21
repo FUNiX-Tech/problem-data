@@ -6,9 +6,11 @@ Comment out your `h1` element and your `p` element, but not your `h2` element.
 
 ---
 
-Để bắt đầu comment, bạn cần sử dụng `<!--` và để kết thúc comment, bạn cần sử dụng `-->`
+Bạn cần dùng  `<!--` để bắt đầu comment và `-->` để kết thúc comment.
 
-Ở bài này, bạn cần comment phần tử `h1` và phần tử `p`, nhưng không phải phần tử `h2`.
+Ở đây bạn cần kết thúc comment trước khi phần tử `h2` bắt đầu.
+
+Hãy biến phần tử `h1` và `p` thành comment, còn phần tử `h2` thì không.
 
 ---
 

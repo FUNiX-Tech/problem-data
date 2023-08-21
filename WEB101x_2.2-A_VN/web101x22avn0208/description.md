@@ -1,20 +1,42 @@
 HTML has another special element for creating ordered lists, or numbered lists.
 
-Ordered lists start with an opening <ol> element, followed by any number of <li> elements. Finally, ordered lists are closed with the </ol> tag.
+Ordered lists start with an opening `<ol>` element, followed by any number of `<li>` elements. Finally, ordered lists are closed with the `</ol>` tag.
 
 For example:
 
+```html
 <ol>
   <li>Garfield</li>
   <li>Sylvester</li>
 </ol>
-would create a numbered list of Garfield and Sylvester.
+```
+
+would create a numbered list of `Garfield` and `Sylvester`.
+
+---
 
 Create an ordered list of the top 3 things cats hate the most.
 
 ---
 
+HTML có một phần tử đặc biệt khác để tạo danh sách có thứ tự hoặc danh sách được đánh số.
+
+Danh sách có thứ tự bắt đầu với một phần tử mở đầu `<ol>`, theo sau là một số phần tử `<li>` và được đóng bằng thẻ `</ol>`.
+
+Ví dụ:
+
+```html
+<ol>
+  <li>Garfield</li>
+  <li>Sylvester</li>
+</ol>
+```
+
+sẽ tạo một danh sách được đánh số của Garfield và Sylvester.
+
 ---
+
+Tạo một danh sách có thứ tự gồm 3 thứ mà mèo ghét nhất.
 
 ```html
 <h2>CatPhotoApp</h2>

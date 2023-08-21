@@ -1,15 +1,32 @@
-Let's try this again, but with margin this time.
+Let's try this again, but with `margin` this time.
 
-Instead of specifying an element's margin-top, margin-right, margin-bottom, and margin-left properties individually, you can specify them all in one line, like this:
+Instead of specifying an element's `margin-top`, `margin-right`, `margin-bottom`, and `margin-left` properties individually, you can specify them all in one line, like this:
 
+```s
 margin: 10px 20px 10px 20px;
+```
+
 These four values work like a clock: top, right, bottom, left, and will produce the exact same result as using the side-specific margin instructions.
 
-Use Clockwise Notation to give the element with the blue-box class a margin of 40px on its top and left side, but only 20px on its bottom and right side.
+---
+
+Use Clockwise Notation to give the element with the `blue-box` class a margin of `40px` on its top and left side, but only `20px` on its bottom and right side.
 
 ---
 
+Hãy thử lại lần nữa, nhưng với `margin` lần này.
+
+Thay vì chỉ định riêng lẻ các thuộc tính `margin-top`, `margin-right`,`margin-bottom`,`margin-left` bạn có thể chỉ định tất cả chúng trong một dòng như sau:
+
+```s
+margin: 10px 20px 10px 20px;
+```
+
+Bốn giá trị top, right, bottom, left được đặt theo vị trí của chiều kim đồng hồ và sẽ tạo ra kết quả chính xác giống như khi sử dụng các thuộc tính riêng lẻ cho bốn mặt.
+
 ---
+
+Sử dụng Ký hiệu chiều kim đồng hồ chỉ định cho phần tử có class `blue-box` một margin `40px` ở phía trên và bên trái, `20px` ở phía dưới và bên phải.
 
 ```html
 <style>

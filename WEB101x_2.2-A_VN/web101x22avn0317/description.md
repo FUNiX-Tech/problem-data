@@ -1,19 +1,48 @@
-Forms commonly use checkboxes for questions that may have more than one answer.
+Forms commonly use _checkboxes_ for questions that may have more than one answer.
 
-Checkboxes are a type of input.
+Checkboxes are a type of `input`.
 
-Each of your checkboxes can be nested within its own label element. By wrapping an input element inside of a label element it will automatically associate the checkbox input with the label element surrounding it.
+Each of your checkboxes can be nested within its own `label` element. By wrapping an `input` element inside of a `label` element it will automatically associate the checkbox input with the label element surrounding it.
 
-All related checkbox inputs should have the same name attribute.
+All related checkbox inputs should have the same `name` attribute.
 
-It is considered best practice to explicitly define the relationship between a checkbox input and its corresponding label by setting the for attribute on the label element to match the id attribute of the associated input element.
+It is considered best practice to explicitly define the relationship between a checkbox `input` and its corresponding `label` by setting the `for` attribute on the `label` element to match the `id` attribute of the associated `input` element.
 
 Here's an example of a checkbox:
 
-<label for="loving"><input id="loving" type="checkbox" name="personality"> Loving</label>
-Add to your form a set of three checkboxes. Each checkbox should be nested within its own label element. All three should share the name attribute of personality.
+```html
+<label for="loving"
+  ><input id="loving" type="checkbox" name="personality" /> Loving</label
+>
+```
 
 ---
+
+Add to your form a set of three checkboxes. Each checkbox should be nested within its own `label` element. All three should share the `name` attribute of `personality`.
+
+---
+
+Các biểu mẫu thường sử dụng các checkbox cho các câu hỏi có thể có nhiều hơn 1 câu trả lời.
+
+Checkbox là một kiểu `input`.
+
+Mỗi checkbox có thể được lồng bên trong phần tử `label` của chính nó. Bằng cách đặt phần tử `input` nằm trong một phần tử `label`, checkbox sẽ tự động được liên kết với phần tử `label` bao xung quanh nó.
+
+Tất cả các checkbox có liên quan với nhau phải có cùng một thuộc tính `name`.
+
+Người ta khuyến cáo rằng tốt nhất là xác định cụ thể mối quan hệ giữa một `input` checkbox với `label` tương ứng bằng cách thiết lập thuộc tính `for` trong phần tử `label` trùng khớp với thuộc tính `id` của phần tử `input` có liên quan.
+
+Dưới đây là một ví dụ về checkbox:
+
+```html
+<label for="loving"
+  ><input id="loving" type="checkbox" name="personality" /> Loving</label
+>
+```
+
+---
+
+Hãy thêm vào biểu mẫu của bạn 3 checkbox. Mỗi checkbox phải được lồng trong phần tử `label` của chính nó. Tất cả các checkbox đều phải có cùng một thuộc tính `name` là `personality`.
 
 ---
 

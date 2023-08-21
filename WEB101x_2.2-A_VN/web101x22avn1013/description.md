@@ -1,15 +1,32 @@
-After creating an area template for your grid container, as shown in the previous challenge, you can place an item in your custom area by referencing the name you gave it. To do this, you use the grid-area property on an item like this:
+After creating an area template for your grid container, as shown in the previous challenge, you can place an item in your custom area by referencing the name you gave it. To do this, you use the `grid-area` property on an item like this:
 
+```css
 .item1 {
-grid-area: header;
+  grid-area: header;
 }
-This lets the grid know that you want the item1 class to go in the area named header. In this case, the item will use the entire top row because that whole row is named as the header area.
+```
 
-Place an element with the item5 class in the footer area using the grid-area property.
+This lets the grid know that you want the `item1` class to go in the area named `header`. In this case, the item will use the entire top row because that whole row is named as the `header` area.
+
+---
+
+Place an element with the `item5` class in the `footer` area using the `grid-area` property.
 
 ---
 
+Sau khi tạo một template area cho grid container, bạn có thể đặt item vào custom area bằng cách tham chiếu tên mà bạn đặt cho nó. Để làm điều này, hãy sử dụng thuộc tính `grid-area` trên item như sau:
+
+```css
+.item1 {
+  grid-area: header;
+}
+```
+
+Điều này sẽ cho grid biết là bạn muốn class `item1` sẽ tới area có tên là `header`. Trong trường hợp này, item sẽ sử dụng toàn bộ hàng trên cùng vì toàn bộ hàng đó được đặt tên theo `header` area.
+
 ---
+
+Hãy đặt một phần tử với class `item5` trong `footer` area sử dụng thuộc tính `grid-area`.
 
 ```html
 <style>

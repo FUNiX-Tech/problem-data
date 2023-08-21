@@ -1,11 +1,28 @@
-You can set a checkbox or radio button to be checked by default using the checked attribute.
+You can set a checkbox or radio button to be checked by default using the `checked` attribute.
 
-To do this, just add the word checked to the inside of an input element. For example:
+To do this, just add the word `checked` to the inside of an `input` element. For example:
 
-<input type="radio" name="test-name" checked>
+```html
+<input type="radio" name="test-name" checked />
+```
+
+---
+
 Set the first of your radio buttons and the first of your checkboxes to both be checked by default.
 
 ---
+
+Bạn có thể thiết lập để checkbox hoặc nút radio nào đó được chọn theo mặc định bằng cách sử dụng thuộc tính `checked`.
+
+Để làm vậy, bạn chỉ cần thêm `checked` vào bên trong phần tử `input`. Ví dụ:
+
+```html
+<input type="radio" name="test-name" checked />
+```
+
+---
+
+Hãy thiết lập sao cho nút radio đầu tiên và checkbox đầu tiên là lựa chọn mặc định.
 
 ---
 

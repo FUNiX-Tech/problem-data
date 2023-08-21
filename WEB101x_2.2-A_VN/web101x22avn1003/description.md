@@ -1,10 +1,16 @@
-The grid you created in the last challenge will set the number of rows automatically. To adjust the rows manually, use the grid-template-rows property in the same way you used grid-template-columns in the previous challenge.
-
-Add two rows to the grid that are 50px tall each.
+The grid you created in the last challenge will set the number of rows automatically. To adjust the rows manually, use the `grid-template-rows` property in the same way you used `grid-template-columns` in the previous challenge.
 
 ---
 
+Add two rows to the grid that are `50px` tall each.
+
 ---
+
+Grid bạn đã tạo trong thử thách trước sẽ tự động đặt số hàng. Để điều chỉnh các hàng theo cách thủ công, hãy sử dụng thuộc tính `grid-template-rows` giống như cách bạn đã sử dụng `grid-template-columns` trong thử thách trước đó.
+
+---
+
+Thêm hai hàng vào grid có chiều cao là `50px` mỗi hàng.
 
 ```html
 <style>

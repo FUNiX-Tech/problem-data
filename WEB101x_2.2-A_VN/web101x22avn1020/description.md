@@ -1,12 +1,20 @@
 Turning an element into a grid only affects the behavior of its direct descendants. So by turning a direct descendant into a grid, you have a grid within a grid.
 
-For example, by setting the display and grid-template-columns properties of the element with the item3 class, you create a grid within your grid.
-
-Turn the element with the item3 class into a grid with two columns with a width of auto and 1fr using display and grid-template-columns.
+For example, by setting the `display` and `grid-template-columns` properties of the element with the `item3` class, you create a grid within your grid.
 
 ---
 
+Turn the element with the `item3` class into a grid with two columns with a width of `auto` and `1fr` using `display` and `grid-template-columns`.
+
 ---
+
+Việc biến một phần tử thành grid chỉ tác động tới hành vi của các phần tử con trực tiếp của nó, do đó, khi biến một phần tử con trực tiếp thành grid, bạn sẽ có grid lồng nhau.
+
+Ví dụ: bằng cách thiết lập các thuộc tính `display` và `grid-template-columns` của phần tử với class `item3`, bạn sẽ tạo được grid lồng nhau.
+
+---
+
+Hãy biến phần tử có class `item3` thành một grid có 2 cột với chiều rộng `auto` và `1fr` bằng `display` và `grid-template-columns`.
 
 ```html
 <style>

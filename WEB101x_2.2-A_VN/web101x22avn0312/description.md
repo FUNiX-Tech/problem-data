@@ -1,15 +1,32 @@
-Placeholder text is what is displayed in your input element before your user has inputted anything.
+Placeholder text is what is displayed in your `input` element before your user has inputted anything.
 
 You can create placeholder text like so:
 
-<input type="text" placeholder="this is placeholder text">
-Note: Remember that input elements are self-closing.
+```html
+<input type="text" placeholder="this is placeholder text" />
+```
 
-Set the placeholder value of your text input to "cat photo URL".
+Note: Remember that `input` elements are self-closing.
 
 ---
 
+Set the `placeholder` value of your text `input` to "cat photo URL".
+
 ---
+
+Văn bản giữ chỗ là những gì được hiển thị trong phần tử `input` trước khi người dùng nhập vào bất cứ thứ gì.
+
+Bạn có thể tạo văn bản giữ chỗ như sau:
+
+```html
+<input type="text" placeholder="this is placeholder text" />
+```
+
+Lưu ý: Nhớ rằng các phần tử `input` không cần thẻ đóng.
+
+---
+
+Đổi giá trị `placeholder` của phần tử `input` có kiểu văn bản thành "cat photo URL" (URL ảnh mèo).
 
 ```html
 <h2>CatPhotoApp</h2>

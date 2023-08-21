@@ -1,10 +1,16 @@
-The last challenge showed an example of the justify-content property. For the tweet embed, this property can be applied to align the items in the .profile-name element.
-
-Add the CSS property justify-content to the header's .profile-name element and set the value to any of the options from the last challenge.
+The last challenge showed an example of the `justify-content` property. For the tweet embed, this property can be applied to align the items in the `.profile-name` element.
 
 ---
 
+Add the CSS property `justify-content` to the header's `.profile-name` element and set the value to any of the options from the last challenge.
+
 ---
+
+Thử thách trước đó cho thấy một ví dụ về thuộc tính `justify-content`. Đối với nhúng Tweet, thuộc tính này có thể được áp dụng để căn chỉnh các item trong phần tử `.profile-name`.
+
+---
+
+Thêm thuộc tính CSS `justify-content` vào phần tử header `.profile-name` và đặt giá trị bất kỳ từ thử thách trước.
 
 ```html
 <style>

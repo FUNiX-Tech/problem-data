@@ -1,6 +1,7 @@
 from bs4 import BeautifulSoup
 from dmoj.result import CheckerResult
 from dmoj.utils.css_parser import parse_css, get_element_css_value, count_element
+from dmoj.utils.chrome_driver import get_driver
 import re
   
 def check(process_output, judge_output, judge_input, point_value, submission_source, **kwargs):
@@ -17,33 +18,32 @@ def check(process_output, judge_output, judge_input, point_value, submission_sou
   
   # criteria 1
   if input == "Thẻ h4 có background-color là rgba(45, 45, 45, 0.1)":
-    bg = get_element_css_value(soup, h4, 'background-color')
-    bg = re.sub(r" !important", "", bg)
-    bg = re.sub(r" +", "", bg)
+    driver = get_driver(source)
+    element = driver.find_element_by_tag_name("h4")
+    css = "" if element is None else driver.get_computed_style(element, "background-color")
+    driver.quit()
 
-    if bg == "rgba(45, 45, 45, 0.1)":
+    if css == "rgba(45, 45, 45, 0.1)":
       return CheckerResult(True, point_value, "")
-
     return CheckerResult(False, 0, "")
 
   # criteria 2
   if input == "Thẻ h4 có padding 10 pixels":
-    padding = get_element_css_value(soup, h4, 'padding')
-    padding = re.sub(r" !important", "", padding)
+    driver = get_driver(source)
+    element = driver.find_element_by_tag_name("h4")
+    css = "" if element is None else driver.get_computed_style(element, "padding")
+    driver.quit()
 
-    if padding == "10px":
+    if css == "10px":
       return CheckerResult(True, point_value, "")
-      
     return CheckerResult(False, 0, "")
   
   # criteria 3
   if input == "Loại bỏ property height của thẻ h4":
     height = get_element_css_value(soup, h4, 'height')
-    height = re.sub(r" !important", "", height)
 
-    if height is None or height == "":
+    if height is None or height.strip() == "":
       return CheckerResult(True, point_value, "")
-      
     return CheckerResult(False, 0, "")
   
   return CheckerResult(False, 0, "Lỗi checker")

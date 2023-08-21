@@ -1,10 +1,14 @@
-The header and footer in the tweet embed example have child items that could be arranged as rows using the flex-direction property. This tells CSS to align the children horizontally.
-
-Add the CSS property flex-direction to both the header and footer and set the value to row.
+The `header` and `footer` in the tweet embed example have child items that could be arranged as rows using the `flex-direction` property. This tells CSS to align the children horizontally.
 
 ---
 
+Add the CSS property `flex-direction` to both the `header` and `footer` and set the value to `row`.
+
 ---
+
+`header` và `footer` trong nhúng Tweet gồm các item có thể được sắp xếp thành các hàng bằng cách sử dụng thuộc tính `flex-direction`. Nó cho phép CSS căn chỉnh các phần tử theo chiều ngang.
+
+Thêm thuộc tính `flex-direction` vào cả `header`, `footer` và đặt giá trị thành `row`.
 
 ```html
 <style>

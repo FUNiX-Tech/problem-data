@@ -1,10 +1,16 @@
-Of course, you can make items consume multiple rows just like you can with columns. You define the horizontal lines you want an item to start and stop at using the grid-row property on a grid item.
-
-Make the element with the item5 class consume the last two rows.
+Of course, you can make items consume multiple rows just like you can with columns. You define the horizontal lines you want an item to start and stop at using the `grid-row` property on a grid item.
 
 ---
 
+Make the element with the `item5` class consume the last two rows.
+
 ---
+
+Bạn có thể làm cho các item sử dụng nhiều hàng giống như bạn có thể làm với các cột. Bạn xác định các line ngang mà bạn muốn một item bắt đầu và dừng lại thông qua việc sử dụng thuộc tính `grid-row` trên một grid item.
+
+---
+
+Chỉ định cho phần tử có class `item5` sử dụng hai hàng cuối cùng.
 
 ```html
 <style>

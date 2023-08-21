@@ -1,14 +1,24 @@
-Sometimes you want to add a elements to your website before you know where they will link.
+Sometimes you want to add `a` elements to your website before you know where they will link.
 
-This is also handy when you're changing the behavior of a link using JavaScript, which we'll learn about later.
-
-The current value of the href attribute is a link that points to "https://www.freecatphotoapp.com". Replace the href attribute value with a #, also known as a hash symbol, to create a dead link.
-
-For example: href="#"
+This is also handy when you're changing the behavior of a link using `JavaScript`, which we'll learn about later.
 
 ---
 
+The current value of the `href` attribute is a link that points to "`https://www.freecatphotoapp.com`". Replace the `href` attribute value with a `#`, also known as a hash symbol, to create a dead link.
+
+For example: `href="#"`
+
 ---
+
+Đôi khi bạn muốn thêm các phần tử `a` vào trang web của mình trước khi bạn biết chúng sẽ liên kết đến đâu.
+
+Điều này hữu ích khi bạn thay đổi hành vi của một liên kết đang sử dụng `JavaScript`, mà chúng ta sẽ tìm hiểu sau.
+
+---
+
+Giá trị hiện tại của `href` là một liên kết trỏ đến "`https://www.freecatphotoapp.com`". Thay thế nó bằng một `#`, còn được gọi là ký hiệu băm, để tạo dead link.
+
+Ví dụ: `href="#"`
 
 ```html
 <h2>CatPhotoApp</h2>

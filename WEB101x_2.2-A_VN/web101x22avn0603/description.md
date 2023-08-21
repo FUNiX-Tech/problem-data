@@ -1,12 +1,20 @@
-Sometimes you will want to customize an element so that it has different amounts of padding on each of its sides.
+Sometimes you will want to customize an element so that it has different amounts of `padding` on each of its sides.
 
-CSS allows you to control the padding of all four individual sides of an element with the padding-top, padding-right, padding-bottom, and padding-left properties.
-
-Give the blue box a padding of 40px on its top and left side, but only 20px on its bottom and right side.
+CSS allows you to control the `padding` of all four individual sides of an element with the `padding-top`, `padding-right`, `padding-bottom`, and `padding-left` properties.
 
 ---
 
+Give the blue box a `padding` of `40px` on its top and left side, but only `20px` on its bottom and right side.
+
 ---
+
+Đôi khi bạn sẽ muốn tùy chỉnh một phần tử để nó có `padding` khác nhau trên mỗi mặt.
+
+CSS cho phép bạn chỉ định `padding` trên bốn mặt riêng lẻ của một phần tử thông qua `padding-top`, `padding-right`,`padding-bottom` và `padding-left`.
+
+---
+
+Chỉ định `padding` hộp màu xanh lam là `40px` phía trên và bên trái, `20px` ở phía dưới và bên phải của nó.
 
 ```html
 <style>

@@ -1,16 +1,7 @@
-from bs4 import BeautifulSoup, Comment
+from bs4 import BeautifulSoup
 from dmoj.result import CheckerResult
-from dmoj.utils.unicode import utf8text
-from dmoj.utils.css_parser import parse_css
 from dmoj.utils.chrome_driver import get_driver
 
-def structure_changed(soup):
-  return soup.find_all("h5", attrs={"class": "injected-text"}) != 1 or \
-    soup.find_all("div", attrs={"class": "box yellow-box"}) != 1 or \
-    soup.find_all("h5", attrs={"class": "box red-box"}) != 1 or \
-    soup.find_all("h5", attrs={"class": "box blue-box"}) != 1
-  
-  
 def check(process_output, judge_output, judge_input, point_value, submission_source, **kwargs):
   input = judge_input.decode('utf-8').strip()
   
@@ -18,17 +9,14 @@ def check(process_output, judge_output, judge_input, point_value, submission_sou
 
   soup = BeautifulSoup(source, 'html.parser')
   
-  if structure_changed(soup):
-    return CheckerResult(False, 0, "")
-  
   # criteria 1
   if input == "Class blue-box có margin top 40px":
+    if len(soup.find(attrs={"class": "blue-box"})) != 1:
+      return CheckerResult(False, 0, "")
+
     driver = get_driver(source)
-    
-    blue_box = driver.get_element_by_class_name("blue-box")
-    
-    css = driver.get_computed_style(blue_box, 'margin-top')
-    
+    element = driver.find_element_by_class_name("blue-box")
+    css = driver.get_computed_style(element, 'margin-top')
     driver.quit()
 
     if css == '40px':
@@ -37,12 +25,12 @@ def check(process_output, judge_output, judge_input, point_value, submission_sou
 
   # criteria 2
   if input == "Class blue-box có margin right 20px":
+    if len(soup.find(attrs={"class": "blue-box"})) != 1:
+      return CheckerResult(False, 0, "")
+
     driver = get_driver(source)
-    
-    blue_box = driver.get_element_by_class_name("blue-box")
-    
-    css = driver.get_computed_style(blue_box, 'margin-right')
-    
+    element = driver.find_element_by_class_name("blue-box")
+    css = driver.get_computed_style(element, 'margin-right')
     driver.quit()
 
     if css == '20px':
@@ -51,12 +39,12 @@ def check(process_output, judge_output, judge_input, point_value, submission_sou
   
   # criteria 3
   if input == "Class blue-box có margin bottom 20px":
+    if len(soup.find(attrs={"class": "blue-box"})) != 1:
+      return CheckerResult(False, 0, "")
+
     driver = get_driver(source)
-    
-    blue_box = driver.get_element_by_class_name("blue-box")
-    
-    css = driver.get_computed_style(blue_box, 'margin-bottom')
-    
+    element = driver.find_element_by_class_name("blue-box")
+    css = driver.get_computed_style(element, 'margin-bottom')
     driver.quit()
 
     if css == '20px':
@@ -65,12 +53,12 @@ def check(process_output, judge_output, judge_input, point_value, submission_sou
   
   # criteria 4
   if input == "Class blue-box có margin left 40px":
+    if len(soup.find(attrs={"class": "blue-box"})) != 1:
+      return CheckerResult(False, 0, "")
+
     driver = get_driver(source)
-    
-    blue_box = driver.get_element_by_class_name("blue-box")
-    
-    css = driver.get_computed_style(blue_box, 'margin-left')
-    
+    element = driver.find_element_by_class_name("blue-box")
+    css = driver.get_computed_style(element, 'margin-left')
     driver.quit()
 
     if css == '40px':

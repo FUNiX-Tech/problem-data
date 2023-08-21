@@ -1,12 +1,20 @@
-auto-fit works almost identically to auto-fill. The only difference is that when the container's size exceeds the size of all the items combined, auto-fill keeps inserting empty rows or columns and pushes your items to the side, while auto-fit collapses those empty rows or columns and stretches your items to fit the size of the container.
+`auto-fit` works almost identically to `auto-fill`. The only difference is that when the container's size exceeds the size of all the items combined, `auto-fill` keeps inserting empty rows or columns and pushes your items to the side, while `auto-fit` collapses those empty rows or columns and stretches your items to fit the size of the container.
 
-Note: If your container can't fit all your items on one row, it will move them down to a new one.
-
-In the second grid, use auto-fit with repeat to fill the grid with columns that have a minimum width of 60px and maximum of 1fr. Then resize the preview to see the difference.
+**Note:** If your container can't fit all your items on one row, it will move them down to a new one.
 
 ---
 
+In the second grid, use `auto-fit` with `repeat` to fill the grid with columns that have a minimum width of `60px` and maximum of `1fr`. Then resize the preview to see the difference.
+
 ---
+
+`auto-fit` hoạt động gần như giống hệt với `auto-fill`, chỉ khác ở chỗ khi kích thước của container vượt quá kích thước của tất cả các item được kết hợp, thì `auto-fill` tiếp tục chèn các hàng/cột rỗng và đẩy item của bạn sang một bên, còn `auto-fit` sẽ thu gọn các hàng/cột rỗng và kéo dài các item để khớp với kích thước của container.
+
+**Lưu ý:** Nếu container của bạn không thể chứa tất cả các item trong một hàng, nó sẽ di chuyển chúng xuống hàng mới.
+
+---
+
+Ở grid thứ hai, hãy dùng `auto-fit` với `repeat` để lấp đầy grid với các cột có chiều rộng tối thiểu là `60px` và tối đa là `1fr`. Sau đó, hãy điều chỉnh lại kích thước preview để thấy được sự khác biệt.
 
 ```html
 <style>

@@ -12,17 +12,15 @@ Note: As a convention, all HTML tags are written in lowercase, for example `<p><
 
 ---
 
-Phần tử `p` là phần tử ưu tiên cho văn bản trên các trang web. `p` là viết tắt của `paragraph`.
+Phần tử  `p` là phần tử được đại diện cho đoạn văn trên các trang web. `p` là viết tắt của `paragraph`.
 
-Bạn có thể tạo một phần tử `paragraph` như thế này:
-
+Bạn có thể tạo một phần tử đoạn văn như sau:
 ```html
 <p>I'm a p tag!</p>
 ```
+Tạo một phần tử `p` bên dưới phần tử `h2` với nội dung `Hello Paragraph`.
 
-Tạo một phần tử `p` bên dưới phần tử `h2` và đặt nội dung `Hello Paragraph`.
-
-Lưu ý: Theo quy ước, tất cả các thẻ HTML được viết bằng chữ thường, ví dụ `<p></p>` chứ không phải `<P></P>`.
+Lưu ý: Theo quy ước, tất cả các thẻ HTML đều được viết bằng chữ thường, chẳng hạn như `<p></p>`, không `<P></P>`.
 
 ---
 

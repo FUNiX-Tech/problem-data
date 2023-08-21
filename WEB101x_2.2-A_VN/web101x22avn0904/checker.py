@@ -1,14 +1,6 @@
-from bs4 import BeautifulSoup, Comment
+from bs4 import BeautifulSoup
 from dmoj.result import CheckerResult
-from dmoj.utils.unicode import utf8text
-from dmoj.utils.css_parser import parse_css, get_element_css_value
 from dmoj.utils.chrome_driver import get_driver
-  
-def structure_changed(soup):
-  return soup.find_all("div", attrs={"class": "follow-button"}) != 1 or \
-        soup.find_all("header") != 1 or \
-        soup.find_all("footer") != 1 or
-
   
 def check(process_output, judge_output, judge_input, point_value, submission_source, **kwargs):
   input = judge_input.decode('utf-8').strip()
@@ -17,20 +9,28 @@ def check(process_output, judge_output, judge_input, point_value, submission_sou
 
   soup = BeautifulSoup(source, 'html.parser')
   
-  if structure_changed(soup):
-    return CheckerResult(False, 0, "")
-  
   # criteria 1
   if input == ".follow-btn được hiển thị trên trang. Đảm bảm rằng đã tắt các tiện ích mở rộng như ad blockers":
+    if len(soup.find_all(attrs={"class": "follow-btn"})) != 1:
+      return CheckerResult(False, 0, "")
     
-    return CheckerResult(True, point_value, "")
-  
+    driver = get_driver(source)
+    element = driver.find_element_by_class_name("follow-btn")
+    css = driver.get_computed_style(element, "display")
+    driver.quit()
+
+    if css != "none":
+      return CheckerResult(True, point_value, "")
+    return CheckerResult(False, 0, "")
+
   # criteria 2
   if input == "header có flex-direction là row":
+    if len(soup.find_all("header")) != 1:
+      return CheckerResult(False, 0, "")
     
     driver = get_driver(source)
     
-    element = driver.get_element_by_tag_name("header")
+    element = driver.find_element_by_tag_name("header")
     
     css = driver.get_computed_style(element, 'flex-direction')
     
@@ -42,10 +42,12 @@ def check(process_output, judge_output, judge_input, point_value, submission_sou
   
   # criteria 3
   if input == "footer có flex-direction là row":
-    
+    if len(soup.find_all("footer")) != 1:
+      return CheckerResult(False, 0, "")
+
     driver = get_driver(source)
     
-    element = driver.get_element_by_tag_name("footer")
+    element = driver.find_element_by_tag_name("footer")
     
     css = driver.get_computed_style(element, 'flex-direction')
     

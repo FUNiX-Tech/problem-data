@@ -1,10 +1,16 @@
-The tweet embed header and footer used the flex-direction property earlier with a row value. Similarly, the items inside the .profile-name element would work well stacked as a column.
-
-Add the CSS property flex-direction to the header's .profile-name element and set the value to column.
+The tweet embed `header` and `footer` used the `flex-direction` property earlier with a row value. Similarly, the items inside the `.profile-name` element would work well stacked as a column.
 
 ---
 
+Add the CSS property `flex-direction` to the header's `.profile-name` element and set the value to `column`.
+
 ---
+
+Tweet embed header và footer sử dụng thuộc tính `flex-direction` trước đó với một giá trị hàng. Tương tự, các mục bên trong phần tử `.profile-name` sẽ hoạt động tốt khi xếp chồng thành một cột.
+
+---
+
+Thêm thuộc tính `flex-direction` của CSS vào phần tử `.profile-name` của header và đặt giá trị thành `column`.
 
 ```html
 <style>

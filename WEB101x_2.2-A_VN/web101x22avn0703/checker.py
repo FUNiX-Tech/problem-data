@@ -5,7 +5,7 @@ from dmoj.utils.css_parser import parse_css, get_element_css_value
 from dmoj.utils.chrome_driver import get_driver
 
 def structure_changed(soup):
-  return soup.find_all("form", id="searchbar") != 1
+  return len(soup.find_all("form", id="searchbar")) != 1 or len(soup.find_all("form")) != 1 or len(soup.find_all(id="searchbar")) != 1 
   
 def check(process_output, judge_output, judge_input, point_value, submission_source, **kwargs):
   input = judge_input.decode('utf-8').strip()
@@ -21,7 +21,7 @@ def check(process_output, judge_output, judge_input, point_value, submission_sou
   if input == "Phần từ có id #searchbar có position absolute":
     driver = get_driver(source)
     
-    element = driver.get_element_by_id("searchbar")
+    element = driver.find_element_by_id("searchbar")
     
     css = driver.get_computed_style(element, 'position')
     
@@ -35,7 +35,7 @@ def check(process_output, judge_output, judge_input, point_value, submission_sou
   if input == "Sử dụng CSS top 50 pixels cho #searchbar":
     driver = get_driver(source)
     
-    element = driver.get_element_by_id("searchbar")
+    element = driver.find_element_by_id("searchbar")
     
     css = driver.get_computed_style(element, 'top')
     
@@ -49,7 +49,7 @@ def check(process_output, judge_output, judge_input, point_value, submission_sou
   if input == "Sử dụng CSS right 50 pixels cho #searchbar":
     driver = get_driver(source)
     
-    element = driver.get_element_by_id("searchbar")
+    element = driver.find_element_by_id("searchbar")
     
     css = driver.get_computed_style(element, 'right')
     

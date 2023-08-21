@@ -1,10 +1,16 @@
-You can add a gap in between the rows of a grid using grid-row-gap in the same way that you added a gap in between columns in the previous challenge.
-
-Create a gap for the rows that is 5px tall.
+You can add a gap in between the rows of a grid using `grid-row-gap` in the same way that you added a gap in between columns in the previous challenge.
 
 ---
 
+Create a gap for the rows that is `5px` tall.
+
 ---
+
+Bạn có thể tạo khoảng cách giữa các hàng trong grid bằng `grid-row-gap` tương tự như cách bạn thêm khoảng cách giữa các cột ở lab trước.
+
+---
+
+Hãy tạo khoảng cách cho các hàng với độ cao là `5px`.
 
 ```html
 <style>

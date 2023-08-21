@@ -1,10 +1,16 @@
-The last challenge introduced the align-items property and gave an example. This property can be applied to a few tweet embed elements to align the flex items inside them.
-
-Add the CSS property align-items to the header's .follow-btn element. Set the value to center.
+The last challenge introduced the `align-items` property and gave an example. This property can be applied to a few tweet embed elements to align the flex items inside them.
 
 ---
 
+Add the CSS property `align-items` to the header's `.follow-btn` element. Set the value to `center`.
+
 ---
+
+Chúng ta đã xem qua ví dụ về thuộc tính `align-items` trong thử thách trước. Thuộc tính này có thể được áp dụng cho một số phần tử trong nhúng tweet để căn chỉnh các flex item.
+
+---
+
+Thêm thuộc tính CSS `align-items`vào phần tử header `.follow-btn`. Đặt giá trị thành `center`.
 
 ```html
 <style>

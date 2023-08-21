@@ -19,24 +19,22 @@ Create an unordered list of three things that cats love at the bottom of the pag
 
 ---
 
-HTML có một phần tử đặc biệt để tạo danh sách không có thứ tự.
+HTML có một phần tử đặc biệt để tạo danh sách không có thứ tự hoặc danh sách kiểu dấu đầu dòng.
 
-Danh sách không có thứ tự bắt đầu bằng thẻ `<ul>` mở, theo sau là các phần tử `<li>` nào. Cuối cùng, các danh sách không có thứ tự sẽ đóng bằng `</ul>`.
+Danh sách không có thứ tự bắt đầu bằng phần tử mở đầu `<ul>`, theo sau là một số phần tử `<li>` và đóng bằng `</ul>`.
 
 Ví dụ:
 
 ```html
 <ul>
-  <li>sữa</li>
-  <li>phô mai</li>
+  <li>milk</li>
+  <li>cheese</li>
 </ul>
 ```
 
-sẽ tạo một danh sách không có thứ tự gồm `sữa` và `phô mai`.
+sẽ tạo một danh sách kiểu dấu đầu dòng của `milk` và `cheese`.
 
----
-
-Tạo một danh sách không có thứ tự gồm ba thứ mà mèo yêu thích ở cuối trang.
+Xóa hai phần tử `p` dưới cùng và tạo một danh sách không có thứ tự gồm ba thứ mà mèo yêu thích ở cuối trang.
 
 ---
 

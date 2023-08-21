@@ -1,6 +1,5 @@
-from bs4 import BeautifulSoup, Comment
+from bs4 import BeautifulSoup
 from dmoj.result import CheckerResult
-from dmoj.utils.unicode import utf8text
 from dmoj.utils.css_parser import parse_css
   
 def check(process_output, judge_output, judge_input, point_value, submission_source, **kwargs):

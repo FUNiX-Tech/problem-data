@@ -1,6 +1,5 @@
-from bs4 import BeautifulSoup, Comment
+from bs4 import BeautifulSoup
 from dmoj.result import CheckerResult
-from dmoj.utils.unicode import utf8text
 from dmoj.utils.css_parser import parse_css
 import re
 
@@ -20,9 +19,9 @@ def check(process_output, judge_output, judge_input, point_value, submission_sou
 
   need_to_check = container.get("grid-template-columns")
   
-  need_to_check = re.sub(r" +", "", need_to_check)
+  need_to_check = re.sub(r" +", " ", need_to_check)
   
-  if need_to_check == 'repeat(auto-fit,minmax(60px,1fr))':
+  if re.fullmatch(r'repeat\s?\(\s?auto-fit\s?,\s?minmax\(\s?60px\s?,\s?1fr\s?\)\s?\)', need_to_check):
     return CheckerResult(True, point_value, "")
   return CheckerResult(False, 0, "")
   

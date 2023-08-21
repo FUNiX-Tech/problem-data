@@ -1,6 +1,5 @@
-from bs4 import BeautifulSoup, Comment
+from bs4 import BeautifulSoup
 from dmoj.result import CheckerResult
-from dmoj.utils.unicode import utf8text
 from dmoj.utils.css_parser import parse_css
 import re
 
@@ -13,7 +12,7 @@ def check(process_output, judge_output, judge_input, point_value, submission_sou
   
   css = parse_css(soup)  
   
-  container = css.get(".container")
+  container = css.get(".item5")
   
   if container is None: 
     return CheckerResult(False, 0, "")

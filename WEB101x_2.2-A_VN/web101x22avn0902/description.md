@@ -1,10 +1,20 @@
-To the right is the tweet embed that will be used as a practical example. Some of the elements would look better with a different layout. The last challenge demonstrated display: flex. Here you'll add it to several components in the tweet embed to start adjusting their positioning.
-
-Add the CSS property display: flex to all of the following items - note that the selectors are already set up in the CSS:
-
-header, the header's .profile-name, the header's .follow-btn, the header's h3 and h4, the footer, and the footer's .stats.
+To the right is the tweet embed that will be used as a practical example. Some of the elements would look better with a different layout. The last challenge demonstrated `display: flex`. Here you'll add it to several components in the tweet embed to start adjusting their positioning.
 
 ---
+
+Add the CSS property `display: flex` to all of the following items - note that the selectors are already set up in the CSS:
+
+`header`, the header's `.profile-name`, the header's `.follow-btn`, the header's `h3` and `h4`, the `footer`, and the footer's `.stats`.
+
+---
+
+Ở bên phải là phần nhúng Tweet sẽ được sử dụng để thực hành. Một số phần tử sẽ trông đẹp hơn với một bố cục mới. Chúng ta sẽ thêm `display: flex` vào một số thành phần trong phần nhúng Tweet để bắt đầu điều chỉnh vị trí của chúng.
+
+---
+
+Thêm thuộc tính CSS `display: flex` vào tất cả các mục sau - lưu ý rằng các bộ chọn đã được thiết lập trong CSS:
+
+`header`. header `.profile-name`, header `.follow-btn`, header `h3` và header `h4`, `footer`, và footer `.stats`
 
 ---
 

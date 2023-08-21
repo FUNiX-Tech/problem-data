@@ -403,7 +403,7 @@ def check(process_output, judge_output, judge_input, point_value, submission_sou
       if element_name is None or element_name.strip() == "":
         return CheckerResult(False, 0, "")
       
-      if len(soup.find_all("input", type="radio", name=element_name)) < 2:
+      if len(soup.find_all("input", type="radio", attrs={"name": element_name})) < 2:
         return CheckerResult(False, 0, "")
     
     return CheckerResult(True, point_value, "")

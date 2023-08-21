@@ -1,15 +1,8 @@
-from bs4 import BeautifulSoup, Comment
+from bs4 import BeautifulSoup
 from dmoj.result import CheckerResult
-from dmoj.utils.unicode import utf8text
-from dmoj.utils.css_parser import parse_css, get_element_css_value
 from dmoj.utils.chrome_driver import get_driver
+from dmoj.utils.css_parser import parse_css
 
-def structure_changed(soup):
-  return soup.find_all("h5", attrs={"class": "injected-text"}) != 1 or \
-    soup.find_all("div", attrs={"class": "box yellow-box"}) != 1 or \
-    soup.find_all("h5", attrs={"class": "box red-box"}) != 1 or \
-    soup.find_all("h5", attrs={"class": "box blue-box"}) != 1
-  
 def check(process_output, judge_output, judge_input, point_value, submission_source, **kwargs):
   input = judge_input.decode('utf-8').strip()
   
@@ -17,17 +10,14 @@ def check(process_output, judge_output, judge_input, point_value, submission_sou
 
   soup = BeautifulSoup(source, 'html.parser')
   
-  if structure_changed(soup):
-    return CheckerResult(False, 0, "")
-  
   # criteria 1
   if input == "Class blue-box có margin top 40px":
+    if len(soup.find(attrs={"class": "blue-box"})) != 1:
+      return CheckerResult(False, 0, "")
+
     driver = get_driver(source)
-    
-    blue_box = driver.get_element_by_class_name("blue-box")
-    
-    css = driver.get_computed_style(blue_box, 'margin-top')
-    
+    element = driver.find_element_by_class_name("blue-box")
+    css = driver.get_computed_style(element, 'margin-top')
     driver.quit()
 
     if css == '40px':
@@ -36,12 +26,12 @@ def check(process_output, judge_output, judge_input, point_value, submission_sou
 
   # criteria 2
   if input == "Class blue-box có margin right 20px":
+    if len(soup.find(attrs={"class": "blue-box"})) != 1:
+      return CheckerResult(False, 0, "")
+
     driver = get_driver(source)
-    
-    blue_box = driver.get_element_by_class_name("blue-box")
-    
-    css = driver.get_computed_style(blue_box, 'margin-right')
-    
+    element = driver.find_element_by_class_name("blue-box")
+    css = driver.get_computed_style(element, 'margin-right')
     driver.quit()
 
     if css == '20px':
@@ -49,13 +39,13 @@ def check(process_output, judge_output, judge_input, point_value, submission_sou
     return CheckerResult(False, 0, "")
   
   # criteria 3
-  if input == "Class blue-box có margin-bottom 20px":
+  if input == "Class blue-box có margin bottom 20px":
+    if len(soup.find(attrs={"class": "blue-box"})) != 1:
+      return CheckerResult(False, 0, "")
+
     driver = get_driver(source)
-    
-    blue_box = driver.get_element_by_class_name("blue-box")
-    
-    css = driver.get_computed_style(blue_box, 'margin-bottom')
-    
+    element = driver.find_element_by_class_name("blue-box")
+    css = driver.get_computed_style(element, 'margin-bottom')
     driver.quit()
 
     if css == '20px':
@@ -64,12 +54,12 @@ def check(process_output, judge_output, judge_input, point_value, submission_sou
   
   # criteria 4
   if input == "Class blue-box có margin left 40px":
+    if len(soup.find(attrs={"class": "blue-box"})) != 1:
+      return CheckerResult(False, 0, "")
+
     driver = get_driver(source)
-    
-    blue_box = driver.get_element_by_class_name("blue-box")
-    
-    css = driver.get_computed_style(blue_box, 'margin-left')
-    
+    element = driver.find_element_by_class_name("blue-box")
+    css = driver.get_computed_style(element, 'margin-left')
     driver.quit()
 
     if css == '40px':
@@ -78,20 +68,9 @@ def check(process_output, judge_output, judge_input, point_value, submission_sou
   
   # criteria 5
   if input == "Sử dụng quy tắc theo chiều kim đồng hồ để set margin cho class blue-box":
-    driver = get_driver(source)
+    css = parse_css(soup)
     
-    blue_box = driver.get_element_by_class_name("blue-box")
-    
-    css = driver.get_computed_style(blue_box, 'margin-left')
-    
-    if blue_box is None:
-      return CheckerResult(False, 0, "")
-
-    padding = driver.get_computed_style(blue_box, 'margin-left')
-    
-    driver.quit()
-
-    if len(padding.strip().split(" ")) >= 2:
+    if css.get(".blue-box") and css.get(".blue-box").get("margin") in ["40px 20px 20px 40px", "40px 20px 20px 40px !important"]:
       return CheckerResult(True, point_value, "")
     return CheckerResult(False, 0, "")
   

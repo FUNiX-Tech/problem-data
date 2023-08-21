@@ -1,13 +1,28 @@
-So far in the grids you have created, the columns have all been tight up against each other. Sometimes you want a gap in between the columns. To add a gap between the columns, use the grid-column-gap property like this:
+So far in the grids you have created, the columns have all been tight up against each other. Sometimes you want a gap in between the columns. To add a gap between the columns, use the `grid-column-gap` property like this:
 
+```css
 grid-column-gap: 10px;
+```
+
 This creates 10px of empty space between all of our columns.
 
-Give the columns in the grid a 20px gap.
+---
+
+Give the columns in the grid a `20px` gap.
 
 ---
 
+So far in the grids you have created, the columns have all been tight up against each other. Sometimes you want a gap in between the columns. To add a gap between the columns, use the `grid-column-gap` property like this:
+
+```css
+grid-column-gap: 10px;
+```
+
+Điều này tạo ra 10px khoảng trống giữa tất cả các cột của chúng ta.
+
 ---
+
+Give the columns in the grid a `20px` gap.
 
 ```html
 <style>

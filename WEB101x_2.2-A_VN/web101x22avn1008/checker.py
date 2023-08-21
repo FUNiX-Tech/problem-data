@@ -13,7 +13,7 @@ def check(process_output, judge_output, judge_input, point_value, submission_sou
   
   css = parse_css(soup)
   
-  item5 = css.get("item5")
+  item5 = css.get(".item5")
 
   if item5 is None:
     return CheckerResult(False, 0, "")

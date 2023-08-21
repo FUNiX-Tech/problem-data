@@ -1,6 +1,5 @@
-from bs4 import BeautifulSoup, Comment
+from bs4 import BeautifulSoup
 from dmoj.result import CheckerResult
-from dmoj.utils.unicode import utf8text
 from dmoj.utils.css_parser import parse_css
 import re
 
@@ -13,14 +12,7 @@ def check(process_output, judge_output, judge_input, point_value, submission_sou
   
   css = parse_css(soup)  
   
-  container = css.get(".container")
-  
-  if container is None: 
-    return CheckerResult(False, 0, "")
-
-  justify_items = container.get("justify-items")
-  
-  if justify_items == 'center':
+  if css.get(".container") and   css.get(".container").get("justify-items") == 'center':
     return CheckerResult(True, point_value, "")
   return CheckerResult(False, 0, "")
   

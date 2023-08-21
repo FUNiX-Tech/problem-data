@@ -1,10 +1,16 @@
-Using the align-items property on a grid container will set the vertical alignment for all the items in our grid.
+Using the `align-items` property on a grid container will set the vertical alignment for all the items in our grid.
+
+---
 
 Use it now to move all the items to the end of each cell.
 
 ---
 
+Sử dụng thuộc tính `align-items` trên grid container sẽ thiết lập căn chỉnh theo chiều dọc cho tất cả các item trong grid.
+
 ---
+
+Giờ hãy sử dụng nó để di chuyển tất cả các item tới cuối mỗi cell.
 
 ```html
 <style>

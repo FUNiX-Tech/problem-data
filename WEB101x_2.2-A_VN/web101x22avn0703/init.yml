@@ -3,4 +3,4 @@ archive: criteria.zip
 test_cases:
   - { in: criteria.1.in, points: 30 }
   - { in: criteria.2.in, points: 30 }
-  - { in: criteria.2.in, points: 40 }
+  - { in: criteria.3.in, points: 40 }

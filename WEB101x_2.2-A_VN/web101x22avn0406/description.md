@@ -1,17 +1,38 @@
-The text-transform property in CSS is used to change the appearance of text. It's a convenient way to make sure text on a webpage appears consistently, without having to change the text content of the actual HTML elements.
+The `text-transform` property in CSS is used to change the appearance of text. It's a convenient way to make sure text on a webpage appears consistently, without having to change the text content of the actual HTML elements.
 
-The following table shows how the different text-transformvalues change the example text "Transform me".
+The following table shows how the different `text-transform` values change the example text "Transform me".
 
-Value Result
-lowercase "transform me"
-uppercase "TRANSFORM ME"
-capitalize "Transform Me"
-initial Use the default value
-inherit Use the text-transform value from the parent element
-none Default: Use the original text
-Transform the text of the h4 to be uppercase using the text-transform property.
+| Value        | Result                                                 |
+| ------------ | ------------------------------------------------------ |
+| `lowercase`  | "transform me"                                         |
+| `uppercase`  | "TRANSFORM ME"                                         |
+| `capitalize` | "Transform Me"                                         |
+| `initial`    | Use the default value                                  |
+| `inherit`    | Use the `text-transform` value from the parent element |
+| `none`       | **Default:** Use the original text                     |
 
 ---
+
+Transform the text of the `h4` to be uppercase using the `text-transform` property.
+
+---
+
+Thuộc tính `text-transform` trong CSS được sử dụng để thay đổi giao diện của văn bản. Điều này giúp bạn thay đổi giao diện văn bản trên trang web mà không cần phải thay đổi nội dung văn bản của các phần tử HTML .
+
+Bảng sau đây cung cấp các giá trị `text-transform` khác nhau, giúp bạn quan sát được sự thay đổi của văn bản mẫu "Transform me" như thế nào.
+
+| Value        | Result                                           |
+| ------------ | ------------------------------------------------ |
+| `lowercase`  | "transform me"                                   |
+| `uppercase`  | "TRANSFORM ME"                                   |
+| `capitalize` | "Transform Me"                                   |
+| `initial`    | Sử dụng giá trị mặc định                         |
+| `inherit`    | Sử dụng giá trị của text-transform từ phần tử mẹ |
+| `none`       | **Mặc định:** Sử dụng văn bản gốc                |
+
+---
+
+Chuyển đổi văn bản của phần tử `h4` thành chữ hoa bằng cách sử dụng thuộc tính `text-transform`.
 
 ---
 

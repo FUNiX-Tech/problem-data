@@ -1,7 +1,7 @@
-from bs4 import BeautifulSoup, Comment
+from bs4 import BeautifulSoup
 from dmoj.result import CheckerResult
-from dmoj.utils.unicode import utf8text
 from dmoj.utils.css_parser import parse_css, get_element_css_value
+from dmoj.utils.chrome_driver import get_driver
   
 def check(process_output, judge_output, judge_input, point_value, submission_source, **kwargs):
   input = judge_input.decode('utf-8').strip()
@@ -17,9 +17,8 @@ def check(process_output, judge_output, judge_input, point_value, submission_sou
   
   # criteria 1
   if input == "Thẻ h1 có class pink-text":
-    if "pink-text" in h1.get("class"):
+    if h1.get("class") and "pink-text" in h1.get("class"):
       return CheckerResult(True, point_value, "")
-
     return CheckerResult(False, 0, "")
 
   # criteria 2
@@ -33,10 +32,16 @@ def check(process_output, judge_output, judge_input, point_value, submission_sou
   
   # criteria 3
   if input == "Thẻ h1 có chữ màu hồng (pink)":
-    color = get_element_css_value(soup, h1, "color")
-    if color and color.lower() in ["pink", "pink !important"]:
+    driver = get_driver(source)
+
+    element = driver.find_element_by_tag_name("h1")
+
+    css = "" if element is None else driver.get_computed_style(element, "color")
+
+    driver.quit()
+
+    if css == "rgb(255, 192, 203)":
       return CheckerResult(True, point_value, "")
     return CheckerResult(False, 0, "")
-  
 
   return CheckerResult(False, 0, "Lỗi checker")

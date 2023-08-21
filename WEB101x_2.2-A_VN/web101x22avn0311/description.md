@@ -1,17 +1,36 @@
 Now let's create a web form.
 
-input elements are a convenient way to get input from your user.
+`input` elements are a convenient way to get input from your user.
 
 You can create a text input like this:
 
-<input type="text">
-Note that input elements are self-closing.
+```html
+<input type="text" />
+```
 
-Create an input element of type text below your lists.
+Note that `input` elements are self-closing.
 
 ---
 
+Create an `input` element of type `text` below your lists.
+
 ---
+
+Ta sẽ tạo một biểu mẫu trên web.
+
+Các phần tử `input` rất hữu ích trong việc thu thập input từ người dùng.
+
+Bạn có thể tạo một `input` văn bản như sau:
+
+```html
+<input type="text" />
+```
+
+Các phần tử `input` đều không cần thẻ đóng.
+
+---
+
+Hãy tạo một phần tử input có kiểu text phía dưới danh sách.
 
 ```html
 <h2>CatPhotoApp</h2>

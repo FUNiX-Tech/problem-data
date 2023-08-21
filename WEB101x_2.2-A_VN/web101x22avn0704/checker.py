@@ -1,11 +1,9 @@
-from bs4 import BeautifulSoup, Comment
+from bs4 import BeautifulSoup
 from dmoj.result import CheckerResult
-from dmoj.utils.unicode import utf8text
-from dmoj.utils.css_parser import parse_css, get_element_css_value
 from dmoj.utils.chrome_driver import get_driver
 
 def structure_changed(soup):
-  return soup.find_all("nav", id="navbar") != 1
+  return len(soup.find_all("nav", id="navbar")) != 1 or len(soup.find_all("nav",)) != 1 or len(soup.find_all( id="navbar")) != 1
   
 def check(process_output, judge_output, judge_input, point_value, submission_source, **kwargs):
   input = judge_input.decode('utf-8').strip()
@@ -21,7 +19,7 @@ def check(process_output, judge_output, judge_input, point_value, submission_sou
   if input == "Phần từ #navbar có position fixed":
     driver = get_driver(source)
     
-    element = driver.get_element_by_id("navbar")
+    element = driver.find_element_by_id("navbar")
     
     css = driver.get_computed_style(element, 'position')
     
@@ -35,7 +33,7 @@ def check(process_output, judge_output, judge_input, point_value, submission_sou
   if input == "Sử dụng CSS top 0 pixels cho #navbar":
     driver = get_driver(source)
     
-    element = driver.get_element_by_id("navbar")
+    element = driver.find_element_by_id("navbar")
     
     css = driver.get_computed_style(element, 'top')
     
@@ -49,7 +47,7 @@ def check(process_output, judge_output, judge_input, point_value, submission_sou
   if input == "Sử dụng CSS left 0 pixels cho #navbar":
     driver = get_driver(source)
     
-    element = driver.get_element_by_id("navbar")
+    element = driver.find_element_by_id("navbar")
     
     css = driver.get_computed_style(element, 'left')
     

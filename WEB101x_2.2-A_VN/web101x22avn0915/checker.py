@@ -1,12 +1,6 @@
-from bs4 import BeautifulSoup, Comment
+from bs4 import BeautifulSoup
 from dmoj.result import CheckerResult
-from dmoj.utils.unicode import utf8text
 from dmoj.utils.css_parser import parse_css
-
-  
-def structure_changed(soup):
-  return soup.find_all("div", id="box-1") != 1 or \
-        soup.find_all("div", id="box-2") != 1 
   
 def check(process_output, judge_output, judge_input, point_value, submission_source, **kwargs):
   input = judge_input.decode('utf-8').strip()
@@ -14,9 +8,6 @@ def check(process_output, judge_output, judge_input, point_value, submission_sou
   source = submission_source.decode('utf-8').strip()
 
   soup = BeautifulSoup(source, 'html.parser')
-  
-  if structure_changed(soup):
-    return CheckerResult(False, 0, "")
   
   css = parse_css(soup)
 

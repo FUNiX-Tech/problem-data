@@ -26,9 +26,9 @@ To pass the test on this challenge, change your `h1` element's text to say `Hell
 
 ---
 
-Đầu tiên, bạn sẽ bắt đầu bằng việc xây dựng một trang web đơn giản bằng HTML. Bạn có thể chỉnh sửa mã (code) trong trình soạn thảo mã (code editor) được nhúng vào trang web này.
+Đầu tiên, bạn sẽ bắt đầu xây dựng một trang web đơn giản bằng HTML. Bạn có thể chỉnh sửa code trong trình soạn thảo đã được nhúng vào trang web này ở góc trên bên phải.
 
-Bạn có thấy code trong code editor của mình có nội dung `<h1>Hello</h1>` không? Đó là một phần tử HTML.
+Bạn có thấy dòng code mẫu `<h1>Hello</h1>` không? Đó là một phần tử HTML.
 
 Hầu hết các phần tử HTML đều có thẻ mở và thẻ đóng.
 
@@ -44,13 +44,13 @@ Các thẻ đóng trông như thế này:
 </h1>
 ```
 
-Sự khác biệt duy nhất giữa thẻ mở và thẻ đóng là dấu gạch chéo (`/`) sau dấu ngoặc mở (`<`) của thẻ đóng.
+Sự khác biệt duy nhất giữa thẻ mở và thẻ đóng là dấu gạch chéo / trong thẻ đóng.
 
 Mỗi bài lab có một hoặc nhiều tiêu chí (criteria). Một bài lab được coi là hoàn thành khi bạn hoàn thành đúng tất cả các tiêu chí. Nhấn nút `nộp bài` ở góc trái bên dưới code editor để nộp bài.
 
 ---
 
-Để vượt qua bài kiểm tra này, hãy thay đổi nội dung thẻ `h1` thành `Hello World`.
+Để vượt qua thử thách này, hãy thay đổi nội dung của phần tử `h1` thành `Hello World`.
 
 ---
 

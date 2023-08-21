@@ -23,7 +23,9 @@ def check(process_output, judge_output, judge_input, point_value, submission_sou
   if grid_template_columns is None:
     return CheckerResult(False, 0, "")
 
-  if re.fullmatch(r"\s?repeat\s?\(\s?3\s?,\s?minmax\s?(\s?90px\s?,\s?1fr\s?\)\s?\)\s?", grid_template_columns):
+  grid_template_columns = grid_template_columns.strip()
+
+  if re.fullmatch(r"repeat\s?\(\s?3\s?,\s?minmax\s?\(\s?90px\s?,\s?1fr\s?\)\s?\)", grid_template_columns):
     return CheckerResult(True, point_value, "")
   return CheckerResult(False, 0, "")
   

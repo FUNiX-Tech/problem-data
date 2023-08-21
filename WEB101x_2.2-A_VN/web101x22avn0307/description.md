@@ -1,23 +1,50 @@
-You can add another level of organization in your HTML document within the html tags with the head and body elements. Any markup with information about your page would go into the head tag. Then any markup with the content of the page (what displays for a user) would go into the body tag.
+You can add another level of organization in your HTML document within the `html` tags with the `head` and `body` elements. Any markup with information about your page would go into the `head` tag. Then any markup with the content of the page (what displays for a user) would go into the `body` tag.
 
-Metadata elements, such as link, meta, title, and style, typically go inside the head element.
+Metadata elements, such as `link`, `meta`, `title`, and `style`, typically go inside the `head` element.
 
 Here's an example of a page's layout:
 
+```html
 <!DOCTYPE html>
 <html>
   <head>
-   <meta charset="utf-8">
-   <title>Example title</title>
+    <meta charset="utf-8" />
+    <title>Example title</title>
   </head>
   <body>
-    <div>
-    </div>
+    <div></div>
   </body>
 </html>
-Edit the markup so there's a head and a body. The head element should only include the title, and the body element should only include the h1 and p.
+```
 
 ---
+
+Edit the markup so there's a `head` and a `body`. The `head` element should only include the `title`, and the `body` element should only include the `h1` and `p`.
+
+---
+
+`head` và `body` là một cấp độ khác trong cấu trúc tài liệu HTML. Nó nằm trong thẻ `html`. Bất kỳ đánh dấu thông tin về trang sẽ được đưa vào thẻ `head` .Bất kỳ đánh dấu nào có nội dung của trang (nội dung hiển thị cho người dùng) sẽ được đưa vào thẻ `body`.
+
+Các phần tử siêu dữ liệu, chẳng hạn như `link`, `meta`, `title`, and `style`, thường nằm bên trong phần tử `head`
+
+Đây là một ví dụ về bố cục của một trang:
+
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Example title</title>
+  </head>
+  <body>
+    <div></div>
+  </body>
+</html>
+```
+
+---
+
+Chúng ta có `head` và `body`. Phần tử `head` chỉ nên bao gồm `title` và phần tử `body` chỉ nên bao gồm `h1` và `p`.
 
 ---
 

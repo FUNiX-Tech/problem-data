@@ -1,13 +1,28 @@
-Instead of specifying an element's padding-top, padding-right, padding-bottom, and padding-left properties individually, you can specify them all in one line, like this:
+Instead of specifying an element's `padding-top`, `padding-right`, `padding-bottom`, and `padding-left` properties individually, you can specify them all in one line, like this:
 
+```s
 padding: 10px 20px 10px 20px;
+```
+
 These four values work like a clock: top, right, bottom, left, and will produce the exact same result as using the side-specific padding instructions.
 
-Use Clockwise Notation to give the .blue-box class a padding of 40px on its top and left side, but only 20px on its bottom and right side.
+---
+
+Use Clockwise Notation to give the `.blue-box` class a `padding` of `40px` on its top and left side, but only `20px` on its bottom and right side.
 
 ---
 
+Thay vì chỉ định riêng lẻ các thuộc tính `padding-top`, `padding-right`,`padding-bottom`,`padding-left`, bạn có thể chỉ định tất cả chúng trong một dòng như sau:
+
+```s
+padding: 10px 20px 10px 20px;
+```
+
+Bốn giá trị này đi theo chiều đồng hồ: trên cùng, phải, dưới cùng, trái và sẽ tạo ra kết quả chính xác giống như khi chỉ định riêng lẻ padding cho cả bốn mặt.
+
 ---
+
+Sử dụng Ký hiệu chiều kim đồng hồ để chỉ định `padding` cho class `.blue-box` `40px` phía trên và bên trái, `20px` ở phía dưới và bên phải.
 
 ```html
 <style>
