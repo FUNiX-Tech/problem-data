@@ -14,7 +14,7 @@ Comment cũng là một cách thuận tiện để giữ cho code không hoạt 
 
 Comment trong HTML bắt đầu bằng `<!--` và kết thúc bằng `-->`
 
-Uncomment phần tử `h1`, `h2` và `p` 
+Uncomment phần tử `h1`, `h2` và `p`.
 
 ```html
 <!--

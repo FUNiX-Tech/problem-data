@@ -1,2 +1,2 @@
 Inform with the Paragraph Element
-Thông báo với phần tử Paragraph
+Hiển thị nội dung với phần tử Paragraph

@@ -1,2 +1,2 @@
 Say Hello to HTML Elements
-Nói Hello với các phần tử HTML
+Mở đầu các phần tử HTML

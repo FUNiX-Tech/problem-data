@@ -34,7 +34,7 @@ Ví dụ:
 
 sẽ tạo một danh sách kiểu dấu đầu dòng của `milk` và `cheese`.
 
-Xóa hai phần tử `p` dưới cùng và tạo một danh sách không có thứ tự gồm ba thứ mà mèo yêu thích ở cuối trang.
+Tạo một danh sách không có thứ tự gồm ba thứ mà mèo yêu thích ở cuối trang.
 
 ---
 
