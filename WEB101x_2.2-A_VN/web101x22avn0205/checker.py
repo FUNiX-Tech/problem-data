@@ -1,7 +1,5 @@
-from bs4 import BeautifulSoup, Comment
+from bs4 import BeautifulSoup
 from dmoj.result import CheckerResult
-from dmoj.utils.unicode import utf8text
-from dmoj.utils.css_parser import parse_css
   
 h1_str = "<h1>Hello World</h1>"
 h2_str = "<h2>CatPhotoApp</h2>"

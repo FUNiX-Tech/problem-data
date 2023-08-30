@@ -10,7 +10,7 @@ red = [
 ]
 
 green = [
-"#008000",
+"#00ff00", "#0f0"
 ]
 
 orange = [
@@ -80,7 +80,7 @@ def check(process_output, judge_output, judge_input, point_value, submission_sou
     element = driver.find_element_by_class_name("green-text")
     css = "" if element is None else driver.get_computed_style(element, "color")
     driver.quit()   
-    if css == "rgb(0, 128, 0)":
+    if css == "rgb(0, 255, 0)":
       return CheckerResult(True, point_value, "")
       
     return CheckerResult(False, 0, "")

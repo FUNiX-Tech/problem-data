@@ -1,6 +1,7 @@
 from bs4 import BeautifulSoup
 from dmoj.result import CheckerResult
-from dmoj.utils.css_parser import get_element_css_value
+from dmoj.utils.css_parser import  get_element_css_value
+from dmoj.utils.chrome_driver import get_driver
 import re
 
 red = [
@@ -18,6 +19,7 @@ red = [
 orchid = [
   "orchid",
   "#DA70D6",
+  "#9932CC",
   "rgb(218,112,214)",
   "rgb(85%,44%,85%)",
   "hsl(302,59%,65%)",
@@ -37,6 +39,7 @@ blue = [
 sienna = [
   "sienna",
   "#A0522D",
+  "#F40",
   "rgb(160,82,45)",
   "rgb(63%,32%,18%)",
   "hsl(19,56%,40%)",
@@ -45,15 +48,8 @@ sienna = [
 
 def tidy_color_value(color):
   color = re.sub(" !important", "", color)
-  color = re.sub(" +", " ", color)
+  color = re.sub(" +", "", color)
   return color
-
-def structure_changed(soup):
-  return \
-    len(soup.find_all('h1', attrs={"class": "red-text"}, string='I am red!')) != 1 or \
-    len(soup.find_all('h1', attrs={"class": "orchid-text"}, string='I am orchid!')) != 1 or \
-    len(soup.find_all('h1', attrs={"class": "sienna-text"}, string='I am sienna!')) != 1 or \
-    len(soup.find_all('h1', attrs={"class": "blue-text"}, string='I am blue!')) != 1
 
 def check(process_output, judge_output, judge_input, point_value, submission_source, **kwargs):
   input = judge_input.decode('utf-8').strip()
@@ -62,28 +58,36 @@ def check(process_output, judge_output, judge_input, point_value, submission_sou
 
   soup = BeautifulSoup(source, 'html.parser')
   
-  if structure_changed(soup):
-    return CheckerResult(False, 0, "")
-  
   # criteria 1
-  if input == "Thẻ h1 với nội dung I am red có màu red":
+  if input == "Thẻ h1 với nội dung I am red! có màu red":
+    if  len(soup.find_all('h1', attrs={"class": "red-text"}, string='I am red!')) != 1:
+      return CheckerResult(False, 0, "")
     
-    h1 = soup.find("h1", string="I am red!")
+    if  len(soup.find_all('h1', attrs={"class": "red-text"})) != 1:
+      return CheckerResult(False, 0, "")
+      
+    driver = get_driver(source)
 
-    color = get_element_css_value(soup, h1, "color")
+    element = driver.find_element_by_class_name("red-text")
 
-    color = tidy_color_value(color)
+    css = "" if element is None else driver.get_computed_style(element, "color")
 
-    print(color)
-    if color in red:
+    driver.quit()
+    
+    if css == "rgb(255, 0, 0)":
       return CheckerResult(True, point_value, "")
     
     return CheckerResult(False, 0, "")
 
   # criteria 2
   if input == "Sử dụng rgb cho màu red":
+    if  len(soup.find_all('h1', attrs={"class": "red-text"}, string='I am red!')) != 1:
+      return CheckerResult(False, 0, "")
     
-    h1 = soup.find("h1", string="I am red!")
+    if  len(soup.find_all('h1', attrs={"class": "red-text"})) != 1:
+      return CheckerResult(False, 0, "")
+    
+    h1 = soup.find("h1", attrs={"class": "red-text"}, string='I am red!')
 
     color = get_element_css_value(soup, h1, "color")
 
@@ -96,22 +100,34 @@ def check(process_output, judge_output, judge_input, point_value, submission_sou
   
   # criteria 3
   if input == "Thẻ h1 có nội dung I am orchid! có màu orchid":
+    if  len(soup.find_all('h1', attrs={"class": "orchid-text"}, string='I am orchid!')) != 1:
+      return CheckerResult(False, 0, "")
     
-    h1 = soup.find("h1", string="I am orchid!")
+    if  len(soup.find_all('h1', attrs={"class": "orchid-text"})) != 1:
+      return CheckerResult(False, 0, "")
+      
+    driver = get_driver(source)
 
-    color = get_element_css_value(soup, h1, "color")
+    element = driver.find_element_by_class_name("orchid-text")
 
-    color = tidy_color_value(color)
+    css = "" if element is None else driver.get_computed_style(element, "color")
 
-    if color in orchid:
+    driver.quit()
+    
+    if css == "rgb(218, 112, 214)":
       return CheckerResult(True, point_value, "")
     
     return CheckerResult(False, 0, "")
   
   # criteria 4
   if input == "Sử dụng rgb cho màu orchid":
+    if  len(soup.find_all('h1', attrs={"class": "orchid-text"}, string='I am orchid!')) != 1:
+      return CheckerResult(False, 0, "")
     
-    h1 = soup.find("h1", string="I am orchid!")
+    if  len(soup.find_all('h1', attrs={"class": "orchid-text"})) != 1:
+      return CheckerResult(False, 0, "")
+    
+    h1 = soup.find("h1",  attrs={"class": "orchid-text"}, string='I am orchid!')
 
     color = get_element_css_value(soup, h1, "color")
 
@@ -124,21 +140,34 @@ def check(process_output, judge_output, judge_input, point_value, submission_sou
   
   # criteria 5
   if input == "Thẻ h1 có nội dung I am blue! có màu blue":
+    if  len(soup.find_all('h1', attrs={"class": "blue-text"}, string='I am blue!')) != 1:
+      return CheckerResult(False, 0, "")
     
-    h1 = soup.find("h1", string="I am blue!")
+    if  len(soup.find_all('h1', attrs={"class": "blue-text"})) != 1:
+      return CheckerResult(False, 0, "")
+      
+    driver = get_driver(source)
 
-    color = get_element_css_value(soup, h1, "color")
+    element = driver.find_element_by_class_name("blue-text")
 
-    color = tidy_color_value(color)
+    css = "" if element is None else driver.get_computed_style(element, "color")
 
-    if color in blue:
+    driver.quit()
+    
+    if css == "rgb(0, 0, 255)":
       return CheckerResult(True, point_value, "")
     
     return CheckerResult(False, 0, "")
 
   # criteria 6
   if input == "Sử dụng rgb cho màu blue":
-    h1 = soup.find("h1", string="I am blue!")
+    if  len(soup.find_all('h1', attrs={"class": "blue-text"}, string='I am blue!')) != 1:
+      return CheckerResult(False, 0, "")
+    
+    if  len(soup.find_all('h1', attrs={"class": "blue-text"})) != 1:
+      return CheckerResult(False, 0, "")
+    
+    h1 = soup.find("h1", attrs={"class": "blue-text"}, string='I am blue!')
 
     color = get_element_css_value(soup, h1, "color")
 
@@ -151,21 +180,34 @@ def check(process_output, judge_output, judge_input, point_value, submission_sou
   
   # criteria 7
   if input == "Thẻ h1 có nội dung I am sienna! có chữ màu sienna":
+    if  len(soup.find_all('h1', attrs={"class": "sienna-text"}, string='I am sienna!')) != 1:
+      return CheckerResult(False, 0, "")
     
-    h1 = soup.find("h1", string="I am sienna!")
+    if  len(soup.find_all('h1', attrs={"class": "sienna-text"})) != 1:
+      return CheckerResult(False, 0, "")
+      
+    driver = get_driver(source)
 
-    color = get_element_css_value(soup, h1, "color")
+    element = driver.find_element_by_class_name("sienna-text")
 
-    color = tidy_color_value(color)
+    css = "" if element is None else driver.get_computed_style(element, "color")
 
-    if color in sienna:
+    driver.quit()
+    
+    if css == "rgb(160, 82, 45)":
       return CheckerResult(True, point_value, "")
     
     return CheckerResult(False, 0, "")
   
   # criteria 8
   if input == "Sử dụng rgb cho màu sienna":
-    h1 = soup.find("h1", string="I am sienna!")
+    if  len(soup.find_all('h1', attrs={"class": "sienna-text"}, string='I am sienna!')) != 1:
+      return CheckerResult(False, 0, "")
+    
+    if  len(soup.find_all('h1', attrs={"class": "sienna-text"})) != 1:
+      return CheckerResult(False, 0, "")
+    
+    h1 = soup.find("h1", attrs={"class": "sienna-text"}, string='I am sienna!')
 
     color = get_element_css_value(soup, h1, "color")
 

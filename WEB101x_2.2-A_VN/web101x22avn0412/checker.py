@@ -37,7 +37,7 @@ def check(process_output, judge_output, judge_input, point_value, submission_sou
 
   # criteria 2
   if input == "Hãy sử dụng hex code thay vì dùng black để có màu nền màu đen":
-    correct_answers = ['#000', '#000 !important', '#000000', '#000000 !importannt']
+    correct_answers = ['#000', '#000 !important', '#000000', '#000000 !important']
     bg = css.get("body").get("background-color") or ""
     if bg in correct_answers:
       return CheckerResult(True, point_value, "")

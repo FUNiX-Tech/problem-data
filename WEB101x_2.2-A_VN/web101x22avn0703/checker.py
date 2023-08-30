@@ -1,7 +1,5 @@
-from bs4 import BeautifulSoup, Comment
+from bs4 import BeautifulSoup
 from dmoj.result import CheckerResult
-from dmoj.utils.unicode import utf8text
-from dmoj.utils.css_parser import parse_css, get_element_css_value
 from dmoj.utils.chrome_driver import get_driver
 
 def structure_changed(soup):

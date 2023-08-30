@@ -11,7 +11,7 @@ def check(process_output, judge_output, judge_input, point_value, submission_sou
   
   # criteria 1
   if input == "Class blue-box có padding top là 40px":
-    if len(soup.find(attrs={"class": "blue-box"})) != 1:
+    if len(soup.find_all(attrs={"class": "blue-box"})) != 1:
       return CheckerResult(False, 0, "")
 
     driver = get_driver(source)
@@ -25,7 +25,7 @@ def check(process_output, judge_output, judge_input, point_value, submission_sou
 
   # criteria 2
   if input == "Class blue-box có padding-right là 20px":
-    if len(soup.find(attrs={"class": "blue-box"})) != 1:
+    if len(soup.find_all(attrs={"class": "blue-box"})) != 1:
       return CheckerResult(False, 0, "")
 
     driver = get_driver(source)
@@ -39,7 +39,7 @@ def check(process_output, judge_output, judge_input, point_value, submission_sou
   
   # criteria 3
   if input == "Class blue-box có padding bottom là 20px":
-    if len(soup.find(attrs={"class": "blue-box"})) != 1:
+    if len(soup.find_all(attrs={"class": "blue-box"})) != 1:
       return CheckerResult(False, 0, "")
 
     driver = get_driver(source)
@@ -53,7 +53,7 @@ def check(process_output, judge_output, judge_input, point_value, submission_sou
   
   # criteria 4
   if input == "Class blue-box có padding left là 40px":
-    if len(soup.find(attrs={"class": "blue-box"})) != 1:
+    if len(soup.find_all(attrs={"class": "blue-box"})) != 1:
       return CheckerResult(False, 0, "")
 
     driver = get_driver(source)

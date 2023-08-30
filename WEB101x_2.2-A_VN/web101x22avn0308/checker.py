@@ -24,11 +24,15 @@ def check(process_output, judge_output, judge_input, point_value, submission_sou
     return CheckerResult(False, 0, "")
   
   # criteria 3
-  if input == "Phần tử p thứ 2 có nội dung là đoạn văn kitty ipsum text được cho":
-    if len(soup.find_all("p")) < 2:
+  if input == "Phần tử p phải chứa một vài từ đầu tiên của kitty ipsum được cung cấp.":
+    if not soup.p:
       return CheckerResult(False, 0, "")
     
-    if soup.find_all("p")[1].text == kitty_ipsum:
+    p_texts = list(map(lambda p: p.text, soup.find_all("p")))
+    
+    print(p_texts)
+    
+    if any(kitty_ipsum.startswith(text) and len(text) > 30 for text in p_texts):
       return CheckerResult(True, point_value, "")
     return CheckerResult(False, 0, "")
   

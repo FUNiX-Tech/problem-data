@@ -24,10 +24,10 @@ green = [
 def structure_changed(soup):
   return \
     len(soup.find_all("h1")) != 4 or \
-    len(soup.find('h1', string="I am red!", attrs={"class": "red-text"} )) != 1 or \
-    len(soup.find('h1', string="I am fuchsia!", attrs={"class": "fuchsia-text"} )) != 1 or \
-    len(soup.find('h1', string="I am cyan!", attrs={"class": "cyan-text"} )) != 1 or \
-    len(soup.find('h1', string="I am green!", attrs={"class": "green-text"} )) != 1
+    len(soup.find_all('h1', string="I am red!", attrs={"class": "red-text"} )) != 1 or \
+    len(soup.find_all('h1', string="I am fuchsia!", attrs={"class": "fuchsia-text"} )) != 1 or \
+    len(soup.find_all('h1', string="I am cyan!", attrs={"class": "cyan-text"} )) != 1 or \
+    len(soup.find_all('h1', string="I am green!", attrs={"class": "green-text"} )) != 1
 
   
 def tidy_color(color):

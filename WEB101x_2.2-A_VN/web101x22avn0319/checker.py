@@ -10,9 +10,8 @@ def check(process_output, judge_output, judge_input, point_value, submission_sou
   soup = BeautifulSoup(source, 'html.parser')
   
   # criteria 1
-  if input == "Radio button đầu tiên mặc định được check":
-    print(soup.find("input", type="radio") == soup.find("input", type="radio", checked=True))
-    if soup.find("input", type="radio") == soup.find("input", type="radio", checked=True):
+  if input == "Radio button đầu tiên của form được check theo mặc định":
+    if soup.form and soup.form.find("input", type="radio") == soup.form.find("input", type="radio", checked=True):
       return CheckerResult(True, point_value, "")
     return CheckerResult(False, 0, "")
 

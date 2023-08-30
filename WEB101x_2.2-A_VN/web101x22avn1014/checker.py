@@ -24,7 +24,7 @@ def check(process_output, judge_output, judge_input, point_value, submission_sou
 
   grid_area = re.sub(r" +", "", grid_area)
     
-  if grid_area == '1/3/4/4':
+  if grid_area == '3/1/4/4':
     return CheckerResult(True, point_value, "")
   return CheckerResult(False, 0, "")
   
